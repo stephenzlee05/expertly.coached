@@ -1,9 +1,10 @@
 import logging
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI
+from fastapi import Depends, FastAPI
 
 from app.database import close_db, connect_db
+from app.dependencies import verify_admin_key
 from app.routers import vapi_tools, vapi_webhooks
 
 logging.basicConfig(level=logging.INFO)
@@ -31,7 +32,7 @@ async def health():
     return {"status": "ok"}
 
 
-@app.post("/admin/set-person-name")
+@app.post("/admin/set-person-name", dependencies=[Depends(verify_admin_key)])
 async def set_person_name(
     agentId: str,
     personKey: str,

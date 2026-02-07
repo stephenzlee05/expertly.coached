@@ -4,14 +4,15 @@ import re
 from datetime import datetime, timezone
 from uuid import uuid4
 
-from fastapi import APIRouter, Request
+from fastapi import APIRouter, Depends, Request
 
+from app.dependencies import verify_vapi_secret
 from app.models.memory import LookupPersonResponse, RecordKind, StartTopicSessionResponse, TopicInfo
 from app.services import memory_service
 
 logger = logging.getLogger(__name__)
 
-router = APIRouter(prefix="/vapi", tags=["vapi-tools"])
+router = APIRouter(prefix="/vapi", tags=["vapi-tools"], dependencies=[Depends(verify_vapi_secret)])
 
 
 # ---------------------------------------------------------------------------

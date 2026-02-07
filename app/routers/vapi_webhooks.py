@@ -1,14 +1,17 @@
 import logging
+from datetime import datetime, timezone
 
-from fastapi import APIRouter, BackgroundTasks, Request
+from fastapi import APIRouter, BackgroundTasks, Depends, Request
 
+from app.config import settings
+from app.dependencies import verify_vapi_secret
 from app.models.memory import RecordKind, SaveConversationResponse
 from app.routers.vapi_tools import normalize_phone
 from app.services import memory_service, summary_service
 
 logger = logging.getLogger(__name__)
 
-router = APIRouter(prefix="/vapi", tags=["vapi-webhooks"])
+router = APIRouter(prefix="/vapi", tags=["vapi-webhooks"], dependencies=[Depends(verify_vapi_secret)])
 
 
 @router.post("/webhooks")
@@ -68,14 +71,23 @@ async def handle_webhook(request: Request, background_tasks: BackgroundTasks):
 
     if not session:
         logger.warning(
-            "No conversation session found for agent=%s phone=%s",
+            "No conversation session found for agent=%s phone=%s. "
+            "Saving transcript to _unmatched topic.",
             assistant_id,
             caller_phone,
         )
-        return SaveConversationResponse(
-            success=False,
-            error="No active conversation session found for this call",
-        ).model_dump()
+        # Save to _unmatched so the transcript is never lost
+        background_tasks.add_task(
+            _save_and_summarize,
+            agent_id=assistant_id,
+            caller_phone=caller_phone,
+            conversation_id=f"conv_unmatched_{datetime.now(timezone.utc).isoformat()}",
+            topic_id="_unmatched",
+            topic_name="_unmatched",
+            coaching_template_code=None,
+            transcript=transcript,
+        )
+        return {"status": "ok"}
 
     conversation_id = session["conversationId"]
     topic_id = session["topicId"]
@@ -106,9 +118,14 @@ async def _save_and_summarize(
     coaching_template_code: str | None,
     transcript: str,
 ) -> None:
-    """Background task: store transcript, generate summary, store summary."""
+    """Background task: store transcript, then generate and store summary.
+
+    Transcript storage and summary generation are in separate try/except
+    blocks so that a summary failure never causes transcript loss.
+    """
+    # 1. Store the transcript (MUST succeed — this is the critical data)
+    transcript_record_id = None
     try:
-        # 1. Store the transcript
         transcript_record_id = await memory_service.create_record(
             agentId=agent_id,
             personKeyType="phone",
@@ -121,8 +138,15 @@ async def _save_and_summarize(
             text=transcript,
         )
         logger.info("Saved transcript record: %s", transcript_record_id)
+    except Exception:
+        logger.exception(
+            "CRITICAL: Failed to save transcript for conversation %s",
+            conversation_id,
+        )
+        return  # Cannot proceed without saving the transcript
 
-        # 2. Fetch existing summaries for context
+    # 2. Generate and store summary (best-effort — failure is non-critical)
+    try:
         summary_records = await memory_service.get_records_for_topic(
             agentId=agent_id,
             personKeyType="phone",
@@ -134,13 +158,11 @@ async def _save_and_summarize(
         )
         past_summaries = [r["text"] for r in summary_records if r.get("text")]
 
-        # 3. Generate new summary via Claude
         new_summary = await summary_service.generate_summary(
             past_summaries=past_summaries,
             transcript=transcript,
         )
 
-        # 4. Store the new summary
         next_seq = await memory_service.get_next_sequence(
             agentId=agent_id,
             personKeyType="phone",
@@ -163,7 +185,67 @@ async def _save_and_summarize(
 
     except Exception:
         logger.exception(
-            "Failed to save/summarize conversation %s for topic %s",
+            "Failed to generate/save summary for conversation %s "
+            "(transcript was saved as %s)",
             conversation_id,
+            transcript_record_id,
+        )
+        return  # Skip consolidation if summary generation failed
+
+    # 3. Consolidate old summaries if over the cap (best-effort)
+    try:
+        cap = settings.SUMMARY_CAP
+        total = await memory_service.count_summaries(
+            agentId=agent_id,
+            personKeyType="phone",
+            personKey=caller_phone,
+            topicId=topic_id,
+        )
+
+        if total > cap:
+            # Fetch all summaries in chronological order
+            all_summaries = await memory_service.get_records_for_topic(
+                agentId=agent_id,
+                personKeyType="phone",
+                personKey=caller_phone,
+                topicId=topic_id,
+                recordKind=RecordKind.summary,
+                limit=total,
+                sort_order="asc",
+            )
+
+            # Consolidate the oldest ones, keeping the newest (cap - 1) intact
+            # This leaves room: 1 consolidated + (cap - 1) recent = cap total
+            num_to_consolidate = total - (cap - 1)
+            to_consolidate = all_summaries[:num_to_consolidate]
+            texts_to_consolidate = [r["text"] for r in to_consolidate if r.get("text")]
+            ids_to_remove = [r["recordId"] for r in to_consolidate]
+
+            logger.info(
+                "Summary cap reached for topic %s: %d summaries (cap=%d). "
+                "Consolidating oldest %d into 1.",
+                topic_id, total, cap, num_to_consolidate,
+            )
+
+            consolidated_text = await summary_service.consolidate_summaries(
+                texts_to_consolidate
+            )
+
+            await memory_service.consolidate_oldest_summaries(
+                agentId=agent_id,
+                personKeyType="phone",
+                personKey=caller_phone,
+                topicId=topic_id,
+                topicName=topic_name,
+                coachingTemplateCode=coaching_template_code,
+                consolidated_text=consolidated_text,
+                records_to_remove=ids_to_remove,
+            )
+            logger.info("Consolidation complete for topic %s", topic_id)
+
+    except Exception:
+        logger.exception(
+            "Failed to consolidate summaries for topic %s "
+            "(transcript and new summary were saved successfully)",
             topic_id,
         )

@@ -231,3 +231,104 @@ async def save_conversation_session(
 async def get_conversation_session(conversationId: str) -> dict[str, Any] | None:
     db = get_db()
     return await db[SESSIONS_COLLECTION].find_one({"conversationId": conversationId})
+
+
+async def count_summaries(
+    agentId: str,
+    personKeyType: str,
+    personKey: str,
+    topicId: str,
+) -> int:
+    """Count the total number of summary records for a topic."""
+    db = get_db()
+    return await db[COLLECTION].count_documents(
+        {
+            "agentId": agentId,
+            "personKeyType": personKeyType,
+            "personKey": personKey,
+            "topicId": topicId,
+            "recordKind": RecordKind.summary.value,
+        }
+    )
+
+
+async def consolidate_oldest_summaries(
+    agentId: str,
+    personKeyType: str,
+    personKey: str,
+    topicId: str,
+    topicName: str,
+    coachingTemplateCode: str | None,
+    consolidated_text: str,
+    records_to_remove: list[str],
+) -> str:
+    """Replace multiple old summary records with a single consolidated one.
+
+    1. Insert the consolidated summary with sequence=1.
+    2. Delete the original records.
+    3. Re-sequence remaining summaries so sequences are contiguous.
+
+    Returns the new consolidated record's ID.
+    """
+    from bson import ObjectId
+
+    db = get_db()
+    now = datetime.now(timezone.utc)
+
+    # 1. Insert consolidated summary (sequence=1, it replaces the oldest batch)
+    consolidated_doc = {
+        "agentId": agentId,
+        "personKeyType": personKeyType,
+        "personKey": personKey,
+        "personName": None,
+        "personId": None,
+        "topicId": topicId,
+        "topicName": topicName,
+        "coachingTemplateCode": coachingTemplateCode,
+        "recordKind": RecordKind.summary.value,
+        "conversationId": None,
+        "sequence": 1,
+        "text": consolidated_text,
+        "data": {"consolidated": True, "replaced_count": len(records_to_remove)},
+        "createdAt": now,
+        "updatedAt": now,
+    }
+    result = await db[COLLECTION].insert_one(consolidated_doc)
+    consolidated_id = str(result.inserted_id)
+
+    # 2. Delete the original records that were consolidated
+    ids_to_delete = [ObjectId(rid) for rid in records_to_remove]
+    delete_result = await db[COLLECTION].delete_many(
+        {"_id": {"$in": ids_to_delete}}
+    )
+    logger.info(
+        "Consolidation: deleted %d old summary records, inserted consolidated %s",
+        delete_result.deleted_count,
+        consolidated_id,
+    )
+
+    # 3. Re-sequence remaining summaries so they are contiguous starting from 1
+    remaining = (
+        db[COLLECTION]
+        .find(
+            {
+                "agentId": agentId,
+                "personKeyType": personKeyType,
+                "personKey": personKey,
+                "topicId": topicId,
+                "recordKind": RecordKind.summary.value,
+            },
+            projection={"_id": 1},
+        )
+        .sort([("sequence", 1), ("createdAt", 1)])
+    )
+    seq = 1
+    async for doc in remaining:
+        await db[COLLECTION].update_one(
+            {"_id": doc["_id"]},
+            {"$set": {"sequence": seq}},
+        )
+        seq += 1
+
+    logger.info("Re-sequenced %d summary records for topic %s", seq - 1, topicId)
+    return consolidated_id
