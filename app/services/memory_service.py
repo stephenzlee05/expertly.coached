@@ -66,6 +66,8 @@ async def get_topics_for_person(
                 "agentId": agentId,
                 "personKeyType": personKeyType,
                 "personKey": personKey,
+                "topicId": {"$not": {"$regex": "^_"}},
+                "topicName": {"$not": {"$regex": "^_"}},
             }
         },
         {

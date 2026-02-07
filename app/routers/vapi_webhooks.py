@@ -3,6 +3,7 @@ import logging
 from fastapi import APIRouter, BackgroundTasks, Request
 
 from app.models.memory import RecordKind, SaveConversationResponse
+from app.routers.vapi_tools import normalize_phone
 from app.services import memory_service, summary_service
 
 logger = logging.getLogger(__name__)
@@ -44,7 +45,7 @@ async def handle_webhook(request: Request, background_tasks: BackgroundTasks):
 
     assistant_id = call.get("assistantId", "")
     customer = call.get("customer", {})
-    caller_phone = customer.get("number", "")
+    caller_phone = normalize_phone(customer.get("number", ""))
 
     if not transcript or not assistant_id:
         logger.warning("end-of-call-report missing transcript or assistantId")

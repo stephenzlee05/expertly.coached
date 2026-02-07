@@ -3,7 +3,11 @@
     "allow": [
       "WebFetch(domain:docs.vapi.ai)",
       "Bash(python -m pip install:*)",
-      "Bash(python -c:*)"
+      "Bash(python -c:*)",
+      "Bash(curl:*)",
+      "Bash(python -m json.tool:*)",
+      "Bash(timeout:*)",
+      "Bash(ping:*)"
     ]
   }
 }

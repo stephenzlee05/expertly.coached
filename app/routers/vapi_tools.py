@@ -1,5 +1,6 @@
 import json
 import logging
+import re
 from datetime import datetime, timezone
 from uuid import uuid4
 
@@ -14,6 +15,24 @@ router = APIRouter(prefix="/vapi", tags=["vapi-tools"])
 
 
 # ---------------------------------------------------------------------------
+# Phone number normalization
+# ---------------------------------------------------------------------------
+
+def normalize_phone(phone: str) -> str:
+    """Normalize phone number to E.164 format (+1XXXXXXXXXX for US)."""
+    if not phone:
+        return ""
+    digits = re.sub(r'[^\d]', '', phone)
+    if len(digits) == 10:
+        return f"+1{digits}"
+    if len(digits) == 11 and digits.startswith('1'):
+        return f"+{digits}"
+    if phone.startswith('+'):
+        return phone
+    return f"+{digits}"
+
+
+# ---------------------------------------------------------------------------
 # Tool dispatch
 # ---------------------------------------------------------------------------
 
@@ -22,14 +41,28 @@ async def handle_tool_calls(request: Request):
     """Handle VAPI tool-calls server event.
 
     VAPI sends a POST with message.type == "tool-calls" containing a
-    toolCallList. We dispatch each tool call by function name and return
-    results in the format VAPI expects.
+    toolCallList. We extract assistantId and callerPhone from the VAPI
+    request context (message.call), NOT from the tool arguments, because
+    the AI model doesn't reliably know these values.
     """
     body = await request.json()
     message = body.get("message", {})
 
     if message.get("type") != "tool-calls":
         return {"results": []}
+
+    # Extract assistantId and callerPhone from VAPI request context
+    call = message.get("call", {})
+    context_assistant_id = call.get("assistantId", "")
+    context_caller_phone = normalize_phone(
+        call.get("customer", {}).get("number", "")
+    )
+
+    logger.info(
+        "VAPI tool-calls: assistantId=%s callerPhone=%s",
+        context_assistant_id,
+        context_caller_phone,
+    )
 
     tool_calls = message.get("toolCallList", [])
     results = []
@@ -47,9 +80,13 @@ async def handle_tool_calls(request: Request):
                 args = {}
 
         if name == "lookupPersonAndTopics":
-            result = await _lookup_person_and_topics(args)
+            result = await _lookup_person_and_topics(
+                args, context_assistant_id, context_caller_phone
+            )
         elif name == "startTopicSession":
-            result = await _start_topic_session(args)
+            result = await _start_topic_session(
+                args, context_assistant_id, context_caller_phone
+            )
         else:
             result = json.dumps({"success": False, "error": f"Unknown tool: {name}"})
 
@@ -62,9 +99,18 @@ async def handle_tool_calls(request: Request):
 # lookupPersonAndTopics
 # ---------------------------------------------------------------------------
 
-async def _lookup_person_and_topics(args: dict) -> str:
-    assistant_id = args.get("assistantId", "")
-    caller_phone = args.get("callerPhone", "")
+async def _lookup_person_and_topics(
+    args: dict, context_assistant_id: str, context_caller_phone: str
+) -> str:
+    # Use VAPI context values, fall back to tool args
+    assistant_id = context_assistant_id or args.get("assistantId", "")
+    caller_phone = context_caller_phone or normalize_phone(args.get("callerPhone", ""))
+
+    logger.info(
+        "lookupPersonAndTopics: assistantId=%s callerPhone=%s",
+        assistant_id,
+        caller_phone,
+    )
 
     if not assistant_id or not caller_phone:
         return json.dumps({"success": False, "error": "assistantId and callerPhone are required"})
@@ -95,13 +141,21 @@ async def _lookup_person_and_topics(args: dict) -> str:
 # startTopicSession
 # ---------------------------------------------------------------------------
 
-async def _start_topic_session(args: dict) -> str:
-    assistant_id = args.get("assistantId", "")
-    caller_phone = args.get("callerPhone", "")
+async def _start_topic_session(
+    args: dict, context_assistant_id: str, context_caller_phone: str
+) -> str:
+    # Use VAPI context values, fall back to tool args
+    assistant_id = context_assistant_id or args.get("assistantId", "")
+    caller_phone = context_caller_phone or normalize_phone(args.get("callerPhone", ""))
     topic_id = args.get("topicId")
     new_topic_name = args.get("newTopicName")
     mode = args.get("mode", "accountability")
     coaching_template_code = args.get("coachingTemplateCode")
+
+    logger.info(
+        "startTopicSession: assistantId=%s callerPhone=%s topicId=%s newTopicName=%s mode=%s",
+        assistant_id, caller_phone, topic_id, new_topic_name, mode,
+    )
 
     if not assistant_id or not caller_phone:
         return json.dumps({"success": False, "error": "assistantId and callerPhone are required"})
