@@ -8,7 +8,12 @@
       "Bash(python -m json.tool:*)",
       "Bash(timeout:*)",
       "Bash(ping:*)",
-      "Bash(test:*)"
+      "Bash(test:*)",
+      "Bash(python test_conversation.py:*)",
+      "WebSearch",
+      "WebFetch(domain:support.vapi.ai)",
+      "WebFetch(domain:www.postman.com)",
+      "Bash(ls -la /c/Users/steph/OneDrive/Desktop/coached/*.txt)"
     ]
   }
 }

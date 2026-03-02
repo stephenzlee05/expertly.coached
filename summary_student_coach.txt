@@ -1,0 +1,4 @@
+This prompt powers an AI voice assistant that acts as a Student Success Coach, essentially a phone-based academic coach that helps students earn top grades. 
+It helps callers build better study habits, create concrete study plans, prepare for exams, manage deadlines across multiple classes, and develop the consistency and mindset of a straight-A student. 
+The assistant remembers past conversations (via topic lookups), so it can follow up on commitments, check progress on assignments, and hold students accountable over time. 
+Rather than giving generic motivational advice, it focuses on specific, actionable next steps, like breaking a big exam into timed study blocks or helping a student figure out exactly where they're stuck in a subject.
