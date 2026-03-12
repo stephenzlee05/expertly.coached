@@ -13,7 +13,15 @@
       "WebSearch",
       "WebFetch(domain:support.vapi.ai)",
       "WebFetch(domain:www.postman.com)",
-      "Bash(ls -la /c/Users/steph/OneDrive/Desktop/coached/*.txt)"
+      "Bash(ls -la /c/Users/steph/OneDrive/Desktop/coached/*.txt)",
+      "Bash(python test_all_assistants.py --verbose 2>&1)",
+      "Bash(cd \"C:\\\\Users\\\\steph\\\\OneDrive\\\\Desktop\\\\coached\" && pip install anthropic python-dotenv pydantic pydantic-settings 2>&1 | tail -5)",
+      "Bash(cd \"C:\\\\Users\\\\steph\\\\OneDrive\\\\Desktop\\\\coached\" && python test_all_assistants.py --verbose 2>&1)",
+      "Bash(cd \"C:\\\\Users\\\\steph\\\\OneDrive\\\\Desktop\\\\coached\" && python test_all_assistants.py --assistant accountability --verbose 2>&1)",
+      "Bash(cd \"C:\\\\Users\\\\steph\\\\OneDrive\\\\Desktop\\\\coached\" && sleep 60 && python test_all_assistants.py --assistant student --verbose 2>&1)",
+      "Bash(cd \"C:\\\\Users\\\\steph\\\\OneDrive\\\\Desktop\\\\coached\" && sleep 60 && python test_all_assistants.py --assistant founder --verbose 2>&1)",
+      "Bash(cd \"C:\\\\Users\\\\steph\\\\OneDrive\\\\Desktop\\\\coached\" && sleep 60 && python test_all_assistants.py --assistant health --verbose 2>&1)",
+      "Bash(cd \"C:\\\\Users\\\\steph\\\\OneDrive\\\\Desktop\\\\coached\" && sleep 60 && python test_all_assistants.py --assistant performance --verbose 2>&1)"
     ]
   }
 }
