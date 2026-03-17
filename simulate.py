@@ -165,7 +165,7 @@ def call_live_backend(tool_name: str, tool_input: dict, caller_phone: str) -> di
     """Call the real backend tool endpoint."""
     import httpx
 
-    server_url = "https://web-production-b0d30.up.railway.app/vapi/tools"
+    server_url = "https://expertly-coached.vercel.app/vapi/tools"
 
     # Build the VAPI-style request body
     body = {

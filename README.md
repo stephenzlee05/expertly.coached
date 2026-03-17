@@ -221,35 +221,31 @@ curl -X POST http://localhost:8000/admin/set-person-name \
   -d '{"agentId": "ASSISTANT_ID", "personKey": "+18605551234", "personName": "Alex"}'
 ```
 
-## Deployment (Railway)
+## Deployment (Vercel)
 
-The app is deployed on Railway. The `Procfile` defines the start command:
-
-```
-web: uvicorn main:app --host 0.0.0.0 --port $PORT
-```
+The app is deployed on Vercel. The `vercel.json` file configures the deployment.
 
 ### Steps to deploy
 
-1. Push code to a GitHub repo connected to Railway (or use `railway up`)
-2. Set all environment variables from `.env.example` in the Railway dashboard
-3. Railway auto-detects Python, installs from `requirements.txt`, and runs the `Procfile`
-4. Note the public URL Railway assigns (e.g. `https://your-app.up.railway.app`)
-5. In the VAPI dashboard, set each assistant's server URL to:
-   - Webhook URL: `https://your-app.up.railway.app/vapi/webhooks`
-   - Tool server URL: `https://your-app.up.railway.app/vapi/tools` (configured per-tool in VAPI)
+1. Push code to a GitHub repo connected to Vercel (or use `vercel`)
+2. Set all environment variables from `.env.example` in the Vercel dashboard
+3. Vercel auto-deploys on push from the `vercel.json` configuration
+4. In the VAPI dashboard, set each assistant's server URL to:
+   - Webhook URL: `https://expertly-coached.vercel.app/vapi/webhooks`
+   - Tool server URL: `https://expertly-coached.vercel.app/vapi/tools` (configured per-tool in VAPI)
    - Server secret: must match `VAPI_SERVER_SECRET`
 
 ### Current production URL
 
-`https://web-production-b0d30.up.railway.app`
+`https://expertly-coached.vercel.app`
 
 ## Project Structure
 
 ```
 coached/
 ├── main.py                          # FastAPI app entrypoint
-├── Procfile                         # Railway deployment
+├── Procfile                         # Legacy Railway deployment
+├── vercel.json                      # Vercel deployment config
 ├── requirements.txt                 # Python dependencies
 ├── .env.example                     # Environment variable template
 ├── app/

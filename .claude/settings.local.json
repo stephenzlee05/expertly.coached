@@ -21,7 +21,9 @@
       "Bash(cd \"C:\\\\Users\\\\steph\\\\OneDrive\\\\Desktop\\\\coached\" && sleep 60 && python test_all_assistants.py --assistant student --verbose 2>&1)",
       "Bash(cd \"C:\\\\Users\\\\steph\\\\OneDrive\\\\Desktop\\\\coached\" && sleep 60 && python test_all_assistants.py --assistant founder --verbose 2>&1)",
       "Bash(cd \"C:\\\\Users\\\\steph\\\\OneDrive\\\\Desktop\\\\coached\" && sleep 60 && python test_all_assistants.py --assistant health --verbose 2>&1)",
-      "Bash(cd \"C:\\\\Users\\\\steph\\\\OneDrive\\\\Desktop\\\\coached\" && sleep 60 && python test_all_assistants.py --assistant performance --verbose 2>&1)"
+      "Bash(cd \"C:\\\\Users\\\\steph\\\\OneDrive\\\\Desktop\\\\coached\" && sleep 60 && python test_all_assistants.py --assistant performance --verbose 2>&1)",
+      "Bash(find:*)",
+      "Bash(wc:*)"
     ]
   }
 }
