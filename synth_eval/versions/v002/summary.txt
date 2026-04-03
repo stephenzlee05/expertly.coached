@@ -1,0 +1,1351 @@
+======================================================================
+  SYNTHETIC EVALUATION REPORT
+  Version: v002
+  Date: 2026-04-02T18:53:09.717498
+  Coaches tested: 7
+  Total sessions: 42
+  Overall score: 3.37 / 5.00
+======================================================================
+
+----------------------------------------------------------------------
+  Accountability Partner
+  Average score: 3.60 / 5.00
+----------------------------------------------------------------------
+
+  Persona: Alex (Session 1)
+  Score: 3.80 / 5.00
+  Scores:
+    excitement                       3  [############........]
+    actionable_plan                  4  [################....]
+    accountability_followup          4  [################....]
+    empathy                          3  [############........]
+    one_question_rule                3  [############........]
+    brevity                          5  [####################]
+    coaching_not_advising            4  [################....]
+    session_arc                      4  [################....]
+    personalization                  4  [################....]
+    overall_effectiveness            4  [################....]
+  Protocol issues:
+    [!] MARKDOWN: 'Makes sense, that happens when work cranks up. So you've got the other half of t...'
+    [!] MARKDOWN: 'Perfect. So thirty minutes each morning Monday through Friday to finish up that ...'
+  Strengths:
+    + Excellent brevity and conversational tone throughout
+    + Strong accountability follow-up that built naturally on prior session
+    + Good coaching approach that drew out the caller's own solution
+  Improvements:
+    - Could have explored the energy/work challenge more deeply before jumping to solutions
+    - Avoid stacking multiple questions in a single turn
+    - Could have generated more excitement about the new approach or celebrated the progress made
+
+
+  Persona: Alex (Session 2)
+  Score: 4.20 / 5.00
+  Scores:
+    excitement                       5  [####################]
+    actionable_plan                  4  [################....]
+    accountability_followup          5  [####################]
+    empathy                          3  [############........]
+    one_question_rule                4  [################....]
+    brevity                          5  [####################]
+    coaching_not_advising            3  [############........]
+    session_arc                      4  [################....]
+    personalization                  5  [####################]
+    overall_effectiveness            4  [################....]
+  Strengths:
+    + Excellent accountability follow-up that celebrated progress
+    + Perfect brevity and conversational tone throughout
+    + Strong personalization using caller's history and preferences
+  Improvements:
+    - Could have explored potential obstacles to the 45-minute commitment
+    - Missed opportunity to dig deeper into why 45 minutes felt right
+    - Could have established specific success metrics or backup plan
+
+
+  Persona: Jordan (Session 1)
+  Score: 3.00 / 5.00
+  Scores:
+    excitement                       2  [########............]
+    actionable_plan                  3  [############........]
+    accountability_followup        N/A    N/A
+    empathy                          2  [########............]
+    one_question_rule                4  [################....]
+    brevity                          5  [####################]
+    coaching_not_advising            3  [############........]
+    session_arc                      2  [########............]
+    personalization                  3  [############........]
+    overall_effectiveness            3  [############........]
+  Protocol issues:
+    [!] MARKDOWN: 'You're welcome! So just to confirm - two hours tomorrow morning to start on the ...'
+  Strengths:
+    + Maintained brevity and conversational tone throughout
+    + Successfully helped caller identify work as the priority area
+    + Got a concrete commitment with timeline from the caller
+  Improvements:
+    - Spend more time building rapport and understanding Jordan's emotional state at the beginning
+    - Explore the work deadline more thoroughly before rushing to commitment
+    - Create more specificity in the action plan (exact time, specific first steps, success criteria)
+
+
+  Persona: Sam (Session 1)
+  Score: 3.90 / 5.00
+  Scores:
+    excitement                       3  [############........]
+    actionable_plan                  3  [############........]
+    accountability_followup          4  [################....]
+    empathy                          4  [################....]
+    one_question_rule                4  [################....]
+    brevity                          5  [####################]
+    coaching_not_advising            4  [################....]
+    session_arc                      4  [################....]
+    personalization                  4  [################....]
+    overall_effectiveness            4  [################....]
+  Protocol issues:
+    [!] MARKDOWN: 'Hey Sam, good to hear from you! Last time you committed to that daily practice b...'
+    [!] MARKDOWN: 'Got it. Sounds like you're feeling stuck on this whole consistency thing. You we...'
+    [!] MARKDOWN: 'That's frustrating, I hear you. What got in the way this week - was it the same ...'
+    [!] MARKDOWN: 'Yeah, that sounds really heavy, and I hear you. Four weeks of not hitting what y...'
+    [!] MARKDOWN: 'I don't think you're lazy - lazy people don't keep calling to work on something ...'
+    [!] MARKDOWN: 'Okay, so there was something there that felt good. What was different about that...'
+    [!] STACKED_QUESTIONS (2)
+    [!] MARKDOWN: 'Of course. So Tuesday morning, ten minutes - anything else you want to talk thro...'
+  Strengths:
+    + Excellent empathy and emotional validation while maintaining forward momentum
+    + Strong coaching approach - consistently drew out caller's own solutions rather than prescribing
+    + Perfect brevity and conversational tone throughout
+  Improvements:
+    - Could have explored more deeply what would make Tuesday different from previous failed attempts
+    - Missed opportunity to help caller identify specific success factors from that one successful day weeks ago
+    - Could have ended with stronger accountability measures or follow-up structure
+
+
+  Persona: Riley (Session 1)
+  Score: 3.11 / 5.00
+  Scores:
+    excitement                       2  [########............]
+    actionable_plan                  3  [############........]
+    accountability_followup        N/A    N/A
+    empathy                          2  [########............]
+    one_question_rule                4  [################....]
+    brevity                          5  [####################]
+    coaching_not_advising            4  [################....]
+    session_arc                      3  [############........]
+    personalization                  2  [########............]
+    overall_effectiveness            3  [############........]
+  Protocol issues:
+    [!] MARKDOWN: 'I hear you - let's keep it practical. What's your name, and what's the thing you...'
+    [!] MARKDOWN: 'Alright, making more money - got it. What's your current situation? Are you look...'
+    [!] STACKED_QUESTIONS (2)
+    [!] MARKDOWN: 'Perfect. So for income growth - are you thinking about asking for a raise at you...'
+    [!] MARKDOWN: 'That's a solid target - $40K jump in a year. To get you the fastest path, I need...'
+    [!] MARKDOWN: 'That's a smart first step - job postings will show you exactly what the market w...'
+    [!] MARKDOWN: 'Hold on - you said you'll look up those 5 job postings, but when are you plannin...'
+    [!] STACKED_QUESTIONS (3)
+  Strengths:
+    + Maintained coaching approach despite caller's demands for direct advice
+    + Kept responses appropriately brief and conversational
+    + Successfully guided caller to identify their own first action step
+  Improvements:
+    - Build better rapport with challenging personalities before diving into goal work
+    - Address caller's resistance and communication style more directly
+    - Ensure commitment timeline is established before allowing session to end
+
+
+  Persona: Taylor (Session 1)
+  Score: 3.60 / 5.00
+  Scores:
+    excitement                       3  [############........]
+    actionable_plan                  3  [############........]
+    accountability_followup          3  [############........]
+    empathy                          4  [################....]
+    one_question_rule                3  [############........]
+    brevity                          4  [################....]
+    coaching_not_advising            4  [################....]
+    session_arc                      4  [################....]
+    personalization                  4  [################....]
+    overall_effectiveness            4  [################....]
+  Protocol issues:
+    [!] MARKDOWN: 'Got it, I won't push for details. When you say back to square one - does that me...'
+    [!] MARKDOWN: 'That sounds like you're in a really dark place right now. When you say you feel ...'
+    [!] MARKDOWN: 'That sounds like the right instinct. Looking at where we left things, you had co...'
+    [!] MARKDOWN: 'A walk tomorrow - that's solid. That's something you can do no matter what else ...'
+    [!] MARKDOWN: 'Of course. You've got one thing locked in - that walk tomorrow. Take care of you...'
+  Strengths:
+    + Excellent emotional support and empathy when caller was in distress
+    + Good coaching approach that led caller to identify their own solution
+    + Strong session structure that balanced emotional needs with forward progress
+  Improvements:
+    - Could have explored the setback more specifically to understand what went wrong
+    - Action plan could be more detailed with timing and connection to larger goals
+    - Missed opportunity to extract learnings from what worked in previous steps
+
+  === SUGGESTED PROMPT IMPROVEMENTS ===
+  Priority: high
+  Analysis: The system is strong on brevity and basic coaching but weak in three critical areas: building excitement/energy, showing deeper empathy, and creating truly actionable plans with specific details and accountability measures.
+
+  Section: Overall Goals
+  Reason:  Addresses the excitement weakness by explicitly making energy-building a core goal
+  Change:  Help the caller make steady progress on the topics they care about. Remember what happened in earlier calls on each topic. Focus on small, concrete next steps — not vague encouragement. Build genuine 
+
+  Section: Voice Conversation Rules
+  Reason:  Addresses empathy weakness by requiring deeper exploration before problem-solving
+  Change:  Before jumping to solutions, always explore the caller's emotional state and context deeply. Ask follow-up questions to understand WHY they're struggling, what obstacles they face, and what's worked b
+
+  Section: New section after Voice Conversation Rules
+  Reason:  Addresses actionable plan weakness by providing specific guidance on creating detailed, obstacle-aware action plans
+  Change:  ## Creating Strong Action Plans
+- Get specific: exact times, days, success criteria, and first concrete steps
+- Explore potential obstacles before finalizing commitments
+- Help caller identify what ma
+
+  Section: New section after action plans
+  Reason:  Directly addresses the excitement weakness with specific guidance on energy-building language and approach
+  Change:  ## Building Energy and Momentum
+- Notice and celebrate wins, however small
+- Help caller connect with their motivation and vision
+- Use language that builds confidence: 'Nice work on that' or 'That so
+
+----------------------------------------------------------------------
+  Founder Execution Coach
+  Average score: 3.32 / 5.00
+----------------------------------------------------------------------
+
+  Persona: Alex (Session 1)
+  Score: 4.00 / 5.00
+  Scores:
+    excitement                       3  [############........]
+    actionable_plan                  4  [################....]
+    accountability_followup          4  [################....]
+    empathy                          3  [############........]
+    one_question_rule                5  [####################]
+    brevity                          5  [####################]
+    coaching_not_advising            4  [################....]
+    session_arc                      4  [################....]
+    personalization                  4  [################....]
+    overall_effectiveness            4  [################....]
+  Protocol issues:
+    [!] MARKDOWN: 'Hey Alex! Good to hear from you. Last time we talked about your main goal and yo...'
+    [!] MARKDOWN: 'Cool. So you committed to finishing that milestone by end of week - did you get ...'
+    [!] MARKDOWN: 'Makes sense. So you're halfway through - what's left to finish the milestone?...'
+    [!] MARKDOWN: 'Awesome. You've got your plan - thirty minutes each morning this week to finish ...'
+  Strengths:
+    + Excellent brevity and conversational flow throughout
+    + Strong accountability follow-up on previous commitments
+    + Guided caller to discover their own solution about morning timing
+  Improvements:
+    - Show deeper empathy for work-life balance struggles before moving to solutions
+    - Check caller's confidence level in the new plan before closing
+    - Generate more excitement and energy around the breakthrough insight
+
+
+  Persona: Alex (Session 2)
+  Score: 4.00 / 5.00
+  Scores:
+    excitement                       4  [################....]
+    actionable_plan                  5  [####################]
+    accountability_followup          4  [################....]
+    empathy                          3  [############........]
+    one_question_rule                4  [################....]
+    brevity                          5  [####################]
+    coaching_not_advising            3  [############........]
+    session_arc                      4  [################....]
+    personalization                  4  [################....]
+    overall_effectiveness            4  [################....]
+  Strengths:
+    + Excellent accountability follow-up that immediately checked on prior commitments
+    + Perfect brevity and conversational tone throughout
+    + Strong session structure with natural flow from check-in to new commitment
+  Improvements:
+    - Could have explored the caller's motivation and reasoning more deeply rather than quickly accepting the 45-minute goal
+    - Missed opportunity to dig deeper into what made the mornings feel 'amazing' to reinforce success patterns
+    - Could have shown more empathy around the missed Wednesday session rather than just dismissing it
+
+
+  Persona: Jordan (Session 1)
+  Score: 2.56 / 5.00
+  Scores:
+    excitement                       1  [####................]
+    actionable_plan                  2  [########............]
+    accountability_followup        N/A    N/A
+    empathy                          2  [########............]
+    one_question_rule                3  [############........]
+    brevity                          4  [################....]
+    coaching_not_advising            4  [################....]
+    session_arc                      2  [########............]
+    personalization                  3  [############........]
+    overall_effectiveness            2  [########............]
+  Protocol issues:
+    [!] STACKED_QUESTIONS (2)
+    [!] STACKED_QUESTIONS (2)
+  Strengths:
+    + Maintained focus on business execution rather than getting pulled into general life coaching
+    + Consistently asked clarifying questions to understand the specific deliverable
+    + Kept responses concise and appropriate for voice coaching format
+  Improvements:
+    - Address the caller's emotional state and overwhelm before diving into specifics
+    - Recognize when a caller is disengaging and adjust approach to re-establish connection
+    - Ensure sessions reach a meaningful conclusion with clear next steps rather than ending abruptly
+
+
+  Persona: Sam (Session 1)
+  Score: 3.20 / 5.00
+  Scores:
+    excitement                       3  [############........]
+    actionable_plan                  2  [########............]
+    accountability_followup          4  [################....]
+    empathy                          4  [################....]
+    one_question_rule                2  [########............]
+    brevity                          4  [################....]
+    coaching_not_advising            3  [############........]
+    session_arc                      3  [############........]
+    personalization                  4  [################....]
+    overall_effectiveness            3  [############........]
+  Protocol issues:
+    [!] STACKED_QUESTIONS (2)
+    [!] STACKED_QUESTIONS (2)
+    [!] STACKED_QUESTIONS (2)
+  Strengths:
+    + Strong empathy and emotional validation when caller was self-critical
+    + Good accountability follow-up on previous commitments
+    + Effective personalization using caller's history and specific details
+  Improvements:
+    - Ask one question at a time to allow caller to fully respond
+    - Dig deeper into what made the successful experience work before moving to new commitment
+    - Ensure plans are fully specified with exact times and contingencies
+
+
+  Persona: Riley (Session 1)
+  Score: 2.44 / 5.00
+  Scores:
+    excitement                       2  [########............]
+    actionable_plan                  3  [############........]
+    accountability_followup        N/A    N/A
+    empathy                          1  [####................]
+    one_question_rule                3  [############........]
+    brevity                          4  [################....]
+    coaching_not_advising            2  [########............]
+    session_arc                      3  [############........]
+    personalization                  1  [####................]
+    overall_effectiveness            3  [############........]
+  Protocol issues:
+    [!] STACKED_QUESTIONS (2)
+    [!] MARKDOWN: 'Hold on - I need to know if this is about getting promoted or switching jobs for...'
+    [!] MARKDOWN: 'You got it. Good luck with those job postings - call me back when you've looked ...'
+  Strengths:
+    + Maintained focus on getting concrete business information needed for coaching
+    + Kept responses brief and conversational throughout the session
+    + Persisted through caller resistance to establish a specific next step
+  Improvements:
+    - Address caller's emotional state and boundary-testing behavior directly rather than ignoring it
+    - Use more coaching questions to draw out caller's own insights instead of directing the conversation
+    - Build better rapport and personalization - get their name and use it, acknowledge their communication style preferences
+
+
+  Persona: Taylor (Session 1)
+  Score: 3.70 / 5.00
+  Scores:
+    excitement                       3  [############........]
+    actionable_plan                  3  [############........]
+    accountability_followup          3  [############........]
+    empathy                          4  [################....]
+    one_question_rule                3  [############........]
+    brevity                          5  [####################]
+    coaching_not_advising            4  [################....]
+    session_arc                      4  [################....]
+    personalization                  4  [################....]
+    overall_effectiveness            4  [################....]
+  Protocol issues:
+    [!] MARKDOWN: 'Got it, I hear you. When you say back to square one - is this something that cha...'
+    [!] MARKDOWN: 'That sounds really overwhelming right now. When you say "I just can't" - are you...'
+    [!] MARKDOWN: 'Got it. A walk tomorrow - that's something concrete you can do. Should we leave ...'
+  Strengths:
+    + Excellent empathy and emotional attunement - gave caller space to breathe and validated their distress
+    + Perfect brevity and conversational tone throughout the session
+    + Strong coaching approach that guided caller to their own solution rather than giving advice
+  Improvements:
+    - Follow one-question-per-turn rule more consistently to avoid overwhelming the caller
+    - Probe deeper into what specifically went wrong with the previous plan for better accountability
+    - Help caller add more specifics to their commitment (what time, where, duration of walk)
+
+  === SUGGESTED PROMPT IMPROVEMENTS ===
+  Priority: high
+  Analysis: The main weaknesses are insufficient empathy/emotional attunement (2.67), low excitement generation (2.83), and incomplete action planning (3.17). The prompt lacks specific guidance on acknowledging emotional states, celebrating wins, and ensuring plans have concrete specifics.
+
+  Section: Overall Goals
+  Reason:  Directly addresses the empathy and excitement gaps by requiring emotional check-ins and win celebration
+  Change:  Focus on small, shippable next steps — not strategy decks or grand visions. Acknowledge the caller's emotional state and celebrate their wins before moving to problem-solving.
+
+  Section: Voice Conversation Rules
+  Reason:  Removes the overly restrictive enthusiasm ban that's preventing appropriate excitement and energy around caller wins
+  Change:  Be genuinely excited about their wins and breakthroughs — say "That's awesome" or "Nice work" when they succeed. Avoid fake enthusiasm, but do celebrate real progress like a supportive co-founder woul
+
+  Section: New section after Voice Conversation Rules
+  Reason:  Creates explicit requirements for the three weakest areas: empathy validation, complete action planning, and building on success patterns
+  Change:  ## Empathy and Action Planning
+
+- When callers share struggles, acknowledge their feelings first: "That sounds frustrating" or "I get why that's hard" before moving to solutions.
+- Before closing, ens
+
+----------------------------------------------------------------------
+  Weight Loss & Health Coach
+  Average score: 3.46 / 5.00
+----------------------------------------------------------------------
+
+  Persona: Alex (Session 1)
+  Score: 3.90 / 5.00
+  Scores:
+    excitement                       3  [############........]
+    actionable_plan                  4  [################....]
+    accountability_followup          4  [################....]
+    empathy                          3  [############........]
+    one_question_rule                4  [################....]
+    brevity                          5  [####################]
+    coaching_not_advising            4  [################....]
+    session_arc                      4  [################....]
+    personalization                  4  [################....]
+    overall_effectiveness            4  [################....]
+  Protocol issues:
+    [!] MARKDOWN: 'Hey Alex! Good to hear from you. Last time you made good progress and had some n...'
+    [!] MARKDOWN: 'Perfect. So you were working on finishing that milestone by end of week - did yo...'
+    [!] MARKDOWN: 'Got it, halfway is still real progress. What got in the way - was it just a busy...'
+    [!] MARKDOWN: 'Nice, that sounds like you've figured out the timing piece. What would need to c...'
+    [!] MARKDOWN: 'Perfect - thirty minutes before work, Monday through Friday. That gives you a cl...'
+  Strengths:
+    + Excellent brevity and conversational tone throughout
+    + Strong accountability follow-up on previous commitments
+    + Good coaching approach that led caller to discover their own solution about morning timing
+  Improvements:
+    - Could have shown more empathy when caller expressed being drained and having life get in the way
+    - Missed opportunity to check caller's confidence level or potential obstacles with the new morning plan
+    - Could have generated more excitement by celebrating the insight about energy levels and timing
+
+
+  Persona: Alex (Session 2)
+  Score: 4.10 / 5.00
+  Scores:
+    excitement                       5  [####################]
+    actionable_plan                  4  [################....]
+    accountability_followup          4  [################....]
+    empathy                          3  [############........]
+    one_question_rule                4  [################....]
+    brevity                          5  [####################]
+    coaching_not_advising            3  [############........]
+    session_arc                      4  [################....]
+    personalization                  5  [####################]
+    overall_effectiveness            4  [################....]
+  Protocol issues:
+    [!] MARKDOWN: 'Hey Alex! Last time you switched your workouts to mornings and said you'd try 30...'
+    [!] MARKDOWN: 'Sounds good! So how did those morning workouts go this week - were you able to h...'
+    [!] MARKDOWN: 'Nice work - four out of five is solid consistency, especially when you're buildi...'
+    [!] MARKDOWN: 'That's awesome that you're feeling the difference! The morning energy boost is r...'
+    [!] MARKDOWN: 'Got it - so 45 minutes before work, Monday through Friday. That's a nice step up...'
+    [!] MARKDOWN: 'Perfect! Have a great week with those 45-minute morning sessions - you've got th...'
+  Strengths:
+    + Excellent personalization using prior context and session details
+    + Maintained caller's high energy and motivation throughout
+    + Perfect brevity for conversational coaching format
+  Improvements:
+    - Explore potential obstacles more deeply (like the Wednesday oversleeping)
+    - Use more coaching questions to draw out caller's own insights about their success
+    - Show more empathy around challenges and help problem-solve setbacks
+
+
+  Persona: Jordan (Session 1)
+  Score: 3.00 / 5.00
+  Scores:
+    excitement                       2  [########............]
+    actionable_plan                  3  [############........]
+    accountability_followup        N/A    N/A
+    empathy                          3  [############........]
+    one_question_rule                4  [################....]
+    brevity                          4  [################....]
+    coaching_not_advising            3  [############........]
+    session_arc                      2  [########............]
+    personalization                  3  [############........]
+    overall_effectiveness            3  [############........]
+  Protocol issues:
+    [!] STACKED_QUESTIONS (2)
+  Strengths:
+    + Maintained clear boundaries about being a health habits coach vs project management
+    + Kept responses concise and conversational throughout
+    + Helped caller identify one specific actionable step to take
+  Improvements:
+    - Better manage session flow when caller jumps between topics - guide them back to health focus
+    - Create stronger closure with commitment reinforcement and clear follow-up expectations
+    - Dig deeper into how work stress affects health habits to create more meaningful intervention
+
+
+  Persona: Sam (Session 1)
+  Score: 4.30 / 5.00
+  Scores:
+    excitement                       3  [############........]
+    actionable_plan                  4  [################....]
+    accountability_followup          4  [################....]
+    empathy                          5  [####################]
+    one_question_rule                5  [####################]
+    brevity                          5  [####################]
+    coaching_not_advising            4  [################....]
+    session_arc                      4  [################....]
+    personalization                  5  [####################]
+    overall_effectiveness            4  [################....]
+  Protocol issues:
+    [!] STACKED_QUESTIONS (2)
+  Strengths:
+    + Exceptional empathy that met the caller where they were emotionally and reframed negative self-talk
+    + Perfect brevity and conversational flow suitable for voice coaching
+    + Strong use of personalization and prior context to build on the caller's history
+  Improvements:
+    - Could have been more specific about the Tuesday morning trigger/timing to strengthen the action plan
+    - Might have explored what made that one successful day different in more detail
+    - Could have drawn out the 'embarrassingly small' concept more from the caller rather than suggesting it
+
+
+  Persona: Riley (Session 1)
+  Score: 1.67 / 5.00
+  Scores:
+    excitement                       1  [####................]
+    actionable_plan                  1  [####................]
+    accountability_followup        N/A    N/A
+    empathy                          2  [########............]
+    one_question_rule                3  [############........]
+    brevity                          4  [################....]
+    coaching_not_advising            1  [####................]
+    session_arc                      1  [####................]
+    personalization                  1  [####................]
+    overall_effectiveness            1  [####................]
+  Strengths:
+    + Maintained clear boundaries about coaching scope and expertise
+    + Kept responses concise and conversational
+    + Consistently redirected to appropriate services for career goals
+  Improvements:
+    - Should have invested more time in building rapport and learning the caller's name
+    - Could have explored connections between health habits and career performance/energy
+    - Needed to address the caller's impatience with more empathy and find ways to engage them within scope
+
+
+  Persona: Taylor (Session 1)
+  Score: 3.80 / 5.00
+  Scores:
+    excitement                       3  [############........]
+    actionable_plan                  3  [############........]
+    accountability_followup          2  [########............]
+    empathy                          5  [####################]
+    one_question_rule                4  [################....]
+    brevity                          5  [####################]
+    coaching_not_advising            4  [################....]
+    session_arc                      4  [################....]
+    personalization                  4  [################....]
+    overall_effectiveness            4  [################....]
+  Protocol issues:
+    [!] MARKDOWN: 'Got it, you don't have to share details. That feeling of being back at square on...'
+    [!] MARKDOWN: 'You're not stupid for having hope and making a plan. That took courage, and the ...'
+    [!] MARKDOWN: 'Yeah, take your time. Sometimes that's exactly what you need - just a minute to ...'
+    [!] MARKDOWN: 'That makes total sense. The big plan can wait - what's one small thing that feel...'
+  Strengths:
+    + Exceptional empathy and emotional attunement - perfectly matched caller's needs
+    + Excellent coaching technique - guided caller to their own solution rather than advising
+    + Perfect brevity and conversational tone throughout the session
+  Improvements:
+    - Could have explored more specifics about what happened to the original plan
+    - Could have made the action plan more detailed (when during the day, how long, etc.)
+    - Could have better leveraged the prior session's progress and learnings
+
+  === SUGGESTED PROMPT IMPROVEMENTS ===
+  Priority: high
+  Analysis: The main weaknesses are generating excitement/energy (2.83), creating actionable plans with specific details (3.17), and using coaching questions instead of giving advice (3.17). The prompt lacks specific guidance on building energy/enthusiasm, doesn't emphasize exploring obstacles and confidence levels for action plans, and needs stronger coaching question frameworks.
+
+  Section: Overall Goals
+  Reason:  Directly addresses the low excitement score by explicitly instructing the coach to celebrate and generate enthusiasm around caller insights
+  Change:  Focus on small, doable behavior changes — not diets, meal plans, or calorie counting. Generate genuine excitement by celebrating insights, wins, and breakthroughs with warm enthusiasm that matches the
+
+  Section: After Voice Conversation Rules
+  Reason:  Addresses both low coaching scores by providing specific question frameworks and emphasizes creating detailed, obstacle-aware action plans
+  Change:  ## Coaching Approach (CRITICAL)
+- Use coaching questions to draw out the caller's own insights rather than giving advice. Ask 'What do you think might work?' or 'What made that successful day differen
+
+  Section: Voice Conversation Rules
+  Reason:  Balances the need for excitement generation while maintaining authenticity, directly addressing the low excitement score
+  Change:  Show genuine enthusiasm for caller insights and wins without being performative. Use warm, authentic celebrations like 'That's a great insight' or 'Nice, you figured that out' when they discover somet
+
+----------------------------------------------------------------------
+  Job Search Coach
+  Average score: 3.02 / 5.00
+----------------------------------------------------------------------
+
+  Persona: Alex (Session 1)
+  Score: 3.70 / 5.00
+  Scores:
+    excitement                       3  [############........]
+    actionable_plan                  4  [################....]
+    accountability_followup          4  [################....]
+    empathy                          3  [############........]
+    one_question_rule                3  [############........]
+    brevity                          4  [################....]
+    coaching_not_advising            4  [################....]
+    session_arc                      4  [################....]
+    personalization                  4  [################....]
+    overall_effectiveness            4  [################....]
+  Protocol issues:
+    [!] MARKDOWN: 'You got it! So you're all set with the morning plan - thirty minutes before work...'
+  Strengths:
+    + Strong accountability follow-up on previous commitments
+    + Excellent use of coaching questions to draw out caller's own solutions
+    + Clear, specific action plan with realistic timeline
+  Improvements:
+    - Could have explored the emotional impact of not meeting commitments more deeply
+    - Missed opportunity to establish success criteria for the milestone completion
+    - Could have generated more excitement and energy around the new approach
+
+
+  Persona: Alex (Session 2)
+  Score: 3.20 / 5.00
+  Scores:
+    excitement                       4  [################....]
+    actionable_plan                  2  [########............]
+    accountability_followup          4  [################....]
+    empathy                          3  [############........]
+    one_question_rule                5  [####################]
+    brevity                          4  [################....]
+    coaching_not_advising            2  [########............]
+    session_arc                      2  [########............]
+    personalization                  4  [################....]
+    overall_effectiveness            2  [########............]
+  Protocol issues:
+    [!] MARKDOWN: 'Got it. So how has that morning routine been working out for you - the thirty mi...'
+    [!] MARKDOWN: 'That's great to hear! But what specifically did you actually work on during thos...'
+    [!] MARKDOWN: 'Okay, so 45 minutes instead of 30, still Monday through Friday before work. But ...'
+    [!] MARKDOWN: 'I can hear you're excited about extending the time, and that's awesome. But I'm ...'
+    [!] STACKED_QUESTIONS (2)
+    [!] MARKDOWN: 'Sounds good! Just to recap - you're committing to 45 minutes Monday through Frid...'
+  Strengths:
+    + Excellent accountability follow-up on prior commitments
+    + Celebrated progress while acknowledging room for improvement
+    + Maintained conversational flow with brief responses
+  Improvements:
+    - Insist on getting specificity about job search activities before accepting the commitment
+    - Explore what made mornings work better to deepen learning
+    - Don't let caller end session without addressing key missing details
+
+
+  Persona: Jordan (Session 1)
+  Score: 2.44 / 5.00
+  Scores:
+    excitement                       2  [########............]
+    actionable_plan                  3  [############........]
+    accountability_followup        N/A    N/A
+    empathy                          3  [############........]
+    one_question_rule                2  [########............]
+    brevity                          4  [################....]
+    coaching_not_advising            2  [########............]
+    session_arc                      2  [########............]
+    personalization                  2  [########............]
+    overall_effectiveness            2  [########............]
+  Protocol issues:
+    [!] MARKDOWN: 'Got it, that scattered feeling is rough. What's your main focus right now - are ...'
+    [!] MARKDOWN: 'I hear you - sounds like a lot on your plate right now. Just to clarify though, ...'
+    [!] MARKDOWN: 'Sorry, I didn't quite catch that - are you saying you're currently employed but ...'
+    [!] MARKDOWN: 'Okay, so you're dealing with work stress and need some accountability around it....'
+    [!] MARKDOWN: 'That sounds really stressful with the deadline coming up. Just want to make sure...'
+    [!] STACKED_QUESTIONS (2)
+    [!] MARKDOWN: 'You're welcome, Jordan. Good luck with that project tomorrow - starting is alway...'
+  Strengths:
+    + Maintained appropriate boundaries about coaching scope
+    + Kept responses concise and conversational
+    + Showed persistence in trying to understand Jordan's situation
+  Improvements:
+    - Better handle scope misalignment earlier to pivot to what help could be provided
+    - Use more coaching questions to help caller process overwhelm
+    - Create more structure and flow rather than getting stuck in clarification loop
+
+
+  Persona: Sam (Session 1)
+  Score: 3.40 / 5.00
+  Scores:
+    excitement                       2  [########............]
+    actionable_plan                  3  [############........]
+    accountability_followup          4  [################....]
+    empathy                          4  [################....]
+    one_question_rule                3  [############........]
+    brevity                          4  [################....]
+    coaching_not_advising            4  [################....]
+    session_arc                      3  [############........]
+    personalization                  4  [################....]
+    overall_effectiveness            3  [############........]
+  Protocol issues:
+    [!] MARKDOWN: 'That sucks, and I get why you're feeling that way right now. But hold on - what ...'
+    [!] MARKDOWN: 'Yeah, that stretch of missing your mark is brutal. But let me ask you this - wha...'
+    [!] STACKED_QUESTIONS (2)
+    [!] MARKDOWN: 'Hey, I hear you're really frustrated with yourself right now. But you did call -...'
+    [!] STACKED_QUESTIONS (2)
+    [!] MARKDOWN: 'Okay, so there was something there that felt good. What was it exactly - what di...'
+    [!] MARKDOWN: 'Of course. So Tuesday morning, ten minutes - you good with that plan?...'
+  Strengths:
+    + Strong empathy and validation of caller's frustration without being dismissive
+    + Good accountability follow-up using specific details from prior sessions
+    + Maintained coaching approach by asking questions rather than giving advice
+  Improvements:
+    - Explore what will make this attempt different from previous failures before accepting another commitment
+    - Dig deeper into the root causes of inconsistency rather than just planning the next attempt
+    - Build more energy and hope before ending - caller still seemed defeated despite having a plan
+
+
+  Persona: Riley (Session 1)
+  Score: 1.67 / 5.00
+  Scores:
+    excitement                       1  [####................]
+    actionable_plan                  1  [####................]
+    actionable_followup            N/A    N/A
+    empathy                          2  [########............]
+    one_question_rule                2  [########............]
+    brevity                          4  [################....]
+    coaching_not_advising            2  [########............]
+    session_arc                      1  [####................]
+    personalization                  1  [####................]
+    overall_effectiveness            1  [####................]
+  Protocol issues:
+    [!] MARKDOWN: 'I hear you - you want direct, actionable advice. But I still need to know your n...'
+    [!] MARKDOWN: 'Wait - if you want help, I really do need to know your name and what kind of wor...'
+  Strengths:
+    + Maintained appropriate boundaries about needing basic information
+    + Kept responses concise and conversational
+    + Acknowledged caller's preference for direct advice
+  Improvements:
+    - Find creative ways to work with resistant callers rather than getting stuck on one requirement
+    - Show more empathy for caller's impatience and validate their emotional state
+    - Develop strategies to build rapport with boundary-testing personas
+
+
+  Persona: Taylor (Session 1)
+  Score: 3.70 / 5.00
+  Scores:
+    excitement                       3  [############........]
+    actionable_plan                  2  [########............]
+    accountability_followup          2  [########............]
+    empathy                          5  [####################]
+    one_question_rule                4  [################....]
+    brevity                          5  [####################]
+    coaching_not_advising            4  [################....]
+    session_arc                      4  [################....]
+    personalization                  4  [################....]
+    overall_effectiveness            4  [################....]
+  Protocol issues:
+    [!] MARKDOWN: 'Yeah, that's really hard when something you've been working toward gets derailed...'
+    [!] MARKDOWN: 'That doesn't sound stupid at all - you were making a plan and moving forward, wh...'
+  Strengths:
+    + Exceptional empathy and emotional support when caller was in crisis
+    + Perfect brevity and conversational tone throughout the session
+    + Skillfully helped caller move from overwhelm to identifying one manageable step
+  Improvements:
+    - Could have explored more specifically what went wrong with the transition plan
+    - The action plan (taking a walk) needed more specificity about timing and connection to goals
+    - Missed opportunity to identify what parts of the original plan might still be viable
+
+  === SUGGESTED PROMPT IMPROVEMENTS ===
+  Priority: high
+  Analysis: The prompt lacks guidance on creating excitement/energy, building comprehensive action plans with specificity, and structuring sessions with clear arcs. The coach is technically proficient but missing emotional engagement and thorough planning elements.
+
+  Section: Overall Goals
+  Reason:  Addresses the weak actionable_plan and excitement scores by requiring specificity and emotional connection to goals
+  Change:  - Focus on small, concrete next actions with specific details: exact companies to research, specific people to contact with their titles, precise application deadlines, interview prep topics — not vag
+
+  Section: Voice Conversation Rules
+  Reason:  Directly addresses the weak session_arc score by providing a framework for call structure
+  Change:  - Structure each call with a clear arc: check accountability from last time, identify today's focus, dig deep into obstacles or wins, create specific next steps, end with energy and clarity about what
+
+  Section: Voice Conversation Rules
+  Reason:  Reframes the excitement rule to allow for appropriate energy and enthusiasm when warranted, addressing the low excitement score
+  Change:  - Build genuine excitement about progress and possibilities without being performative. Use energy that matches breakthrough moments: "That's a real shift" or "Now we're getting somewhere" — like a sh
+
+  Section: New section after Voice Conversation Rules
+  Reason:  Addresses recurring feedback about exploring root causes, demanding specificity, and using coaching questions to process emotions
+  Change:  ## Coaching Deep Dives
+
+- When someone hasn't followed through on commitments, explore what made it hard before making new plans. What was different about times that worked?
+- Don't accept vague commi
+
+----------------------------------------------------------------------
+  Personal Performance Coach
+  Average score: 3.53 / 5.00
+----------------------------------------------------------------------
+
+  Persona: Alex (Session 1)
+  Score: 3.90 / 5.00
+  Scores:
+    excitement                       3  [############........]
+    actionable_plan                  4  [################....]
+    accountability_followup          4  [################....]
+    empathy                          3  [############........]
+    one_question_rule                4  [################....]
+    brevity                          5  [####################]
+    coaching_not_advising            4  [################....]
+    session_arc                      4  [################....]
+    personalization                  4  [################....]
+    overall_effectiveness            4  [################....]
+  Strengths:
+    + Excellent brevity and conversational tone
+    + Strong accountability follow-up on prior commitments
+    + Good coaching approach drawing out caller's own solutions
+  Improvements:
+    - Could have explored the setup question about preparing for morning sessions
+    - Missed opportunity to generate more excitement about the new plan
+    - Could have dug deeper into what specifically made work so draining
+
+
+  Persona: Alex (Session 2)
+  Score: 4.30 / 5.00
+  Scores:
+    excitement                       5  [####################]
+    actionable_plan                  4  [################....]
+    accountability_followup          5  [####################]
+    empathy                          3  [############........]
+    one_question_rule                5  [####################]
+    brevity                          5  [####################]
+    coaching_not_advising            4  [################....]
+    session_arc                      4  [################....]
+    personalization                  4  [################....]
+    overall_effectiveness            4  [################....]
+  Strengths:
+    + Excellent accountability follow-up that built on prior session success
+    + Maintained perfect brevity and natural conversation flow
+    + Successfully amplified Alex's excitement and momentum
+  Improvements:
+    - Could have explored the Wednesday setback more to prevent future issues
+    - Missed opportunity to ask deeper coaching questions about the 45-minute goal
+    - Could have gotten more specific about implementation details like exact wake-up time
+
+
+  Persona: Jordan (Session 1)
+  Score: 3.11 / 5.00
+  Scores:
+    excitement                       2  [########............]
+    actionable_plan                  3  [############........]
+    accountability_followup        N/A    N/A
+    empathy                          4  [################....]
+    one_question_rule                3  [############........]
+    brevity                          4  [################....]
+    coaching_not_advising            3  [############........]
+    session_arc                      3  [############........]
+    personalization                  3  [############........]
+    overall_effectiveness            3  [############........]
+  Protocol issues:
+    [!] MARKDOWN: 'I hear you - when everything feels urgent, nothing gets the attention it needs. ...'
+    [!] MARKDOWN: 'I get why you'd want me to just decide for you - that scattered feeling makes it...'
+    [!] MARKDOWN: 'Okay, work it is. What specifically about work is creating the stress - is it on...'
+    [!] MARKDOWN: 'What's the project, and what would "getting started" look like - what's the very...'
+    [!] MARKDOWN: 'Good - two hours tomorrow morning to start. What time are you going to block off...'
+    [!] MARKDOWN: 'You're all set - two hours tomorrow morning to get started on the project. Talk ...'
+  Strengths:
+    + Good empathy and validation of Jordan's overwhelmed state
+    + Successfully helped Jordan narrow down from 'everything' to work stress
+    + Kept responses concise and conversational
+  Improvements:
+    - Get more specific commitment details (exact time, first task) before closing
+    - Explore the work project more deeply to ensure Jordan feels confident about starting
+    - Build more energy and motivation before ending the session
+
+
+  Persona: Sam (Session 1)
+  Score: 3.20 / 5.00
+  Scores:
+    excitement                       2  [########............]
+    actionable_plan                  2  [########............]
+    accountability_followup          4  [################....]
+    empathy                          4  [################....]
+    one_question_rule                4  [################....]
+    brevity                          4  [################....]
+    coaching_not_advising            3  [############........]
+    session_arc                      2  [########............]
+    personalization                  4  [################....]
+    overall_effectiveness            3  [############........]
+  Protocol issues:
+    [!] STACKED_QUESTIONS (2)
+  Strengths:
+    + Strong empathy and emotional validation when caller was self-critical
+    + Excellent use of prior context and accountability follow-up
+    + Appropriate suggestion of counseling resources when caller seemed deeply discouraged
+  Improvements:
+    - Create a stronger closing with specific accountability measures and success planning
+    - Develop a more concrete plan for what will make this attempt different from previous failures
+    - Build more momentum and energy in the caller before ending the session
+
+
+  Persona: Riley (Session 1)
+  Score: 2.89 / 5.00
+  Scores:
+    excitement                       2  [########............]
+    actionable_plan                  3  [############........]
+    accountability_followup        N/A    N/A
+    empathy                          2  [########............]
+    one_question_rule                4  [################....]
+    brevity                          4  [################....]
+    coaching_not_advising            4  [################....]
+    session_arc                      3  [############........]
+    personalization                  1  [####................]
+    overall_effectiveness            3  [############........]
+  Protocol issues:
+    [!] MARKDOWN: 'Hey there! I'm your performance coach - you can call me whenever you want help g...'
+    [!] MARKDOWN: 'I hear you - straight to action. But I need to know what area you want to tackle...'
+    [!] MARKDOWN: 'Got it, income growth with accountability. Starting fresh here.
+
+What's your cur...'
+    [!] MARKDOWN: 'Okay, $60K to $100K in a year - that's a solid jump. The fastest path usually de...'
+    [!] MARKDOWN: 'Nice, that's a smart first move. Research will show you exactly where the money ...'
+    [!] MARKDOWN: 'Cool. So just to confirm - you're going to look up 5 job postings above $90K in ...'
+  Strengths:
+    + Maintained coaching approach despite caller's pushiness
+    + Kept responses concise and action-focused
+    + Successfully guided caller to self-generate solutions
+  Improvements:
+    - Build rapport and get basic information like name and job field
+    - Address the caller's impatient energy more directly
+    - Confirm specific timelines for commitments
+
+
+  Persona: Taylor (Session 1)
+  Score: 3.80 / 5.00
+  Scores:
+    excitement                       3  [############........]
+    actionable_plan                  3  [############........]
+    accountability_followup          2  [########............]
+    empathy                          5  [####################]
+    one_question_rule                4  [################....]
+    brevity                          5  [####################]
+    coaching_not_advising            4  [################....]
+    session_arc                      4  [################....]
+    personalization                  4  [################....]
+    overall_effectiveness            4  [################....]
+  Protocol issues:
+    [!] MARKDOWN: 'I hear you - that's really tough when something you've been working toward gets ...'
+    [!] MARKDOWN: 'I can understand feeling that way when something important doesn't go as planned...'
+    [!] MARKDOWN: 'That makes sense. Take your time - there's no rush here. When you're ready, I'm ...'
+    [!] MARKDOWN: 'Got it. A walk tomorrow sounds perfect - sometimes that's exactly what we need. ...'
+    [!] MARKDOWN: 'Of course, Taylor. I'm glad you called. So just to recap - you're going to take ...'
+  Strengths:
+    + Exceptional empathy and emotional support for distressed caller
+    + Perfect brevity and conversational tone throughout
+    + Strong coaching approach guiding caller to their own solutions
+  Improvements:
+    - Could have explored what specifically derailed the transition plan for better accountability
+    - Action plan was very minimal - could have helped caller think through more specifics
+    - Missed opportunity to connect the walk to larger goals or recovery strategy
+
+  === SUGGESTED PROMPT IMPROVEMENTS ===
+  Priority: high
+  Analysis: The main weaknesses are generating excitement/energy (2.83), creating actionable plans with specific details (3.17), and maintaining strong session arcs that build to meaningful conclusions (3.33). The prompt lacks guidance on building momentum, getting specific implementation details, and creating energizing closures.
+
+  Section: Overall Goals
+  Reason:  Directly addresses the excitement and actionable plan weaknesses by emphasizing energy-building and specificity
+  Change:  Focus on small, high-leverage next actions that build momentum — not grand plans or vague encouragement. Generate genuine excitement by helping callers connect their actions to what they care about mo
+
+  Section: Add new section after Voice Conversation Rules
+  Reason:  Provides specific techniques to address all three weak areas: excitement generation, detailed planning, and strong session conclusions
+  Change:  ## Building Energy and Momentum
+
+- Help callers connect their commitments to their deeper motivations and values. Ask what excites them most about taking this action.
+- Before ending sessions, ensure 
+
+  Section: Add new section after Building Energy and Momentum
+  Reason:  Directly addresses session arc weakness and provides framework for creating more engaging, complete sessions
+  Change:  ## Session Arc and Closing
+
+- Every session should have forward movement: from problem/check-in → clarity → specific action → energy/commitment.
+- Don't rush to end sessions. If a caller found clarity
+
+----------------------------------------------------------------------
+  Sales & Prospecting Coach
+  Average score: 3.46 / 5.00
+----------------------------------------------------------------------
+
+  Persona: Alex (Session 1)
+  Score: 3.90 / 5.00
+  Scores:
+    excitement                       3  [############........]
+    actionable_plan                  4  [################....]
+    accountability_followup          4  [################....]
+    empathy                          3  [############........]
+    one_question_rule                4  [################....]
+    brevity                          5  [####################]
+    coaching_not_advising            4  [################....]
+    session_arc                      4  [################....]
+    personalization                  4  [################....]
+    overall_effectiveness            4  [################....]
+  Protocol issues:
+    [!] MARKDOWN: 'Yeah, that's rough when work drains everything you've got left. So you've got th...'
+    [!] MARKDOWN: 'Perfect. Thirty minutes before work, Monday through Friday - that sounds solid. ...'
+    [!] MARKDOWN: 'Awesome. You've got a good plan - thirty minutes each morning this week should g...'
+  Strengths:
+    + Excellent brevity and conversational flow throughout
+    + Strong coaching approach - drew solutions from caller rather than advising
+    + Good accountability follow-up that built naturally into problem-solving
+  Improvements:
+    - Could have shown deeper empathy around work exhaustion before moving to solutions
+    - Missed opportunity to build more excitement and confidence in the new plan
+    - Could have explored potential obstacles to the morning routine commitment
+
+
+  Persona: Alex (Session 2)
+  Score: 3.50 / 5.00
+  Scores:
+    excitement                       5  [####################]
+    actionable_plan                  3  [############........]
+    accountability_followup          4  [################....]
+    empathy                          2  [########............]
+    one_question_rule                4  [################....]
+    brevity                          5  [####################]
+    coaching_not_advising            3  [############........]
+    session_arc                      2  [########............]
+    personalization                  4  [################....]
+    overall_effectiveness            3  [############........]
+  Protocol issues:
+    [!] MARKDOWN: 'That's great to hear. So what specifically did you accomplish during those morni...'
+  Strengths:
+    + Maintained caller's high energy and motivation throughout the session
+    + Kept responses perfectly brief and conversational for voice format
+    + Effectively followed up on prior commitments with specific accountability
+  Improvements:
+    - Explore what specifically was accomplished during successful sessions to build on wins
+    - Don't let important planning questions (like backup strategies) go unanswered
+    - Create proper session closure rather than ending abruptly when caller signals departure
+
+
+  Persona: Jordan (Session 1)
+  Score: 3.44 / 5.00
+  Scores:
+    excitement                       3  [############........]
+    actionable_plan                  4  [################....]
+    accountability_followup        N/A    N/A
+    empathy                          4  [################....]
+    one_question_rule                2  [########............]
+    brevity                          4  [################....]
+    coaching_not_advising            3  [############........]
+    session_arc                      4  [################....]
+    personalization                  3  [############........]
+    overall_effectiveness            4  [################....]
+  Protocol issues:
+    [!] MARKDOWN: 'Nice to meet you, Jordan. I'm basically your sales coach - you can call me to st...'
+    [!] MARKDOWN: 'That sounds really overwhelming, and I hear you. This feels like it's bigger tha...'
+    [!] STACKED_QUESTIONS (2)
+    [!] MARKDOWN: 'I get that you want someone to just cut through it all for you. But here's the t...'
+    [!] MARKDOWN: 'Okay, work stress and accountability. To help you get focused, I need to know wh...'
+    [!] MARKDOWN: 'Got it. What's the deadline for - is this a proposal you need to get out, a pres...'
+    [!] MARKDOWN: 'Sounds like you've got a plan to tackle that deadline. Two hours tomorrow mornin...'
+    [!] MARKDOWN: 'Good to hear. You've got your two hours blocked tomorrow morning - that's what m...'
+  Strengths:
+    + Maintained appropriate boundaries by focusing on sales/work-related issues while acknowledging broader life concerns
+    + Showed genuine empathy for the caller's overwhelmed state while still guiding toward action
+    + Successfully helped caller move from scattered anxiety to a concrete commitment with timeline
+  Improvements:
+    - Follow the one-question-per-turn rule more consistently to avoid overwhelming an already scattered caller
+    - Use more coaching questions to help caller discover their own priorities rather than directing the conversation
+    - Could have explored what specific obstacles might prevent the caller from following through on their commitment
+
+
+  Persona: Sam (Session 1)
+  Score: 3.80 / 5.00
+  Scores:
+    excitement                       3  [############........]
+    actionable_plan                  3  [############........]
+    actionable_followup              4  [################....]
+    empathy                          4  [################....]
+    one_question_rule                4  [################....]
+    brevity                          4  [################....]
+    coaching_not_advising            4  [################....]
+    session_arc                      4  [################....]
+    personalization                  4  [################....]
+    overall_effectiveness            4  [################....]
+  Protocol issues:
+    [!] MARKDOWN: 'I hear you - zero days is rough after committing to Monday, Wednesday, Friday. B...'
+    [!] MARKDOWN: 'Yeah, four weeks of missing your own targets is frustrating as hell. But let me ...'
+    [!] STACKED_QUESTIONS (2)
+    [!] MARKDOWN: 'Take your time. I'm not buying the lazy thing - lazy people don't keep calling t...'
+    [!] MARKDOWN: 'Okay, so there was something there that felt good. What was different about that...'
+    [!] MARKDOWN: 'You got it. I'll ask you Tuesday when we talk next - how'd the ten minutes go?...'
+  Strengths:
+    + Excellent empathy and reframing of negative self-talk without being dismissive
+    + Strong accountability follow-up that built constructively on past failures
+    + Skillful coaching approach that guided caller to their own solutions
+  Improvements:
+    - Could have pushed for more specific details on timing and reminder system before closing
+    - Missed opportunity to explore what specifically made that one successful day work
+    - Could have generated more excitement and confidence about the new approach
+
+
+  Persona: Riley (Session 1)
+  Score: 2.44 / 5.00
+  Scores:
+    excitement                       2  [########............]
+    actionable_plan                  3  [############........]
+    actionable_followup            N/A    N/A
+    empathy                          2  [########............]
+    one_question_rule                2  [########............]
+    brevity                          4  [################....]
+    coaching_not_advising            4  [################....]
+    session_arc                      2  [########............]
+    personalization                  1  [####................]
+    overall_effectiveness            2  [########............]
+  Protocol issues:
+    [!] MARKDOWN: 'Hey there! I'm basically your sales coach - you can call me to stay on top of yo...'
+    [!] MARKDOWN: 'I hear you - straight to business. But I still need to know your name and what y...'
+    [!] MARKDOWN: 'Okay, making more money - I get that. But I need your name and what you actually...'
+    [!] MARKDOWN: 'I hear you want accountability around income growth. But I still need your name ...'
+    [!] MARKDOWN: 'Alright, $60K to $100K in a year. But I need to know - what's your name and what...'
+    [!] STACKED_QUESTIONS (2)
+    [!] MARKDOWN: 'Got it - sounds like you're thinking about skill development. What field are you...'
+    [!] MARKDOWN: 'That's a solid start - researching what higher-paying roles need. Just so I'm cl...'
+    [!] STACKED_QUESTIONS (2)
+    [!] MARKDOWN: 'Alright, sounds like you've got a plan to start with. Good luck with the researc...'
+  Strengths:
+    + Maintained persistence in trying to gather basic information
+    + Used coaching approach to let caller develop their own action plan
+    + Kept responses concise and conversational
+  Improvements:
+    - Build rapport and address caller's impatience directly before pushing for information
+    - Stop stacking multiple questions in single responses
+    - Create proper session closure with commitment and next steps
+
+
+  Persona: Taylor (Session 1)
+  Score: 3.70 / 5.00
+  Scores:
+    excitement                       3  [############........]
+    actionable_plan                  2  [########............]
+    accountability_followup          4  [################....]
+    empathy                          5  [####################]
+    one_question_rule                3  [############........]
+    brevity                          4  [################....]
+    coaching_not_advising            4  [################....]
+    session_arc                      4  [################....]
+    personalization                  4  [################....]
+    overall_effectiveness            4  [################....]
+  Protocol issues:
+    [!] MARKDOWN: 'Okay, I get that you don't want to dive into the details right now. When you say...'
+    [!] MARKDOWN: 'Hey, that's not stupid at all - you took a shot at something that mattered to yo...'
+    [!] MARKDOWN: 'Of course. I'm glad you called and talked through it. 
+
+Take that walk tomorrow ...'
+  Strengths:
+    + Exceptional empathy and emotional support for caller in distress
+    + Appropriately scaled expectations to caller's current capacity
+    + Strong follow-up on previous session context and commitments
+  Improvements:
+    - Could have explored what specifically derailed the plan to inform future approaches
+    - More consistent adherence to one-question-per-turn rule
+    - Could have established more concrete follow-up timing or check-in structure
+
+  === SUGGESTED PROMPT IMPROVEMENTS ===
+  Priority: high
+  Analysis: The main issues are violations of the one-question rule (stacking multiple questions), lack of excitement generation, and insufficient focus on creating concrete actionable plans with obstacle exploration. The prompt needs stronger enforcement mechanisms and specific guidance on building momentum.
+
+  Section: Voice Conversation Rules - one question rule
+  Reason:  Adds a specific self-checking mechanism to prevent question stacking, addressing the 3.17 score
+  Change:  Ask only ONE question per turn. Never stack multiple questions. This includes either/or questions — pick one angle and commit. Do not add a second question after a pause or line break. If you catch yo
+
+  Section: Overall Goals
+  Reason:  Directly addresses the excitement weakness (3.17 score) by making it an explicit goal
+  Change:  - Generate genuine excitement and confidence about their plans and wins. Help them see what's possible and feel energized about their next steps. Celebrate progress and reframe setbacks as learning op
+
+  Section: New section after Overall Goals
+  Reason:  Addresses the actionable_plan weakness (3.17 score) by requiring obstacle exploration and specificity that evaluators consistently noted as missing
+  Change:  ## Action Planning Requirements
+
+- Always explore potential obstacles before finalizing commitments: "What might get in the way of this?" or "When has this approach failed before?"
+- Push for specific
+
+----------------------------------------------------------------------
+  Student Success Coach
+  Average score: 3.21 / 5.00
+----------------------------------------------------------------------
+
+  Persona: Alex (Session 1)
+  Score: 3.60 / 5.00
+  Scores:
+    excitement                       3  [############........]
+    actionable_plan                  4  [################....]
+    accountability_followup          4  [################....]
+    empathy                          3  [############........]
+    one_question_rule                2  [########............]
+    brevity                          4  [################....]
+    coaching_not_advising            4  [################....]
+    session_arc                      4  [################....]
+    personalization                  4  [################....]
+    overall_effectiveness            4  [################....]
+  Protocol issues:
+    [!] MARKDOWN: 'Cool. So I see you had committed to finishing your next milestone by the end of ...'
+    [!] MARKDOWN: 'Got it, halfway is still progress. What got in the way - was it just time, or di...'
+    [!] MARKDOWN: 'Makes sense - work can definitely drain the tank. So you've still got the other ...'
+    [!] MARKDOWN: 'That sounds smart - mornings before work kicks in. What would you need to do to ...'
+    [!] MARKDOWN: 'Perfect - thirty minutes each morning Monday through Friday. That should give yo...'
+  Strengths:
+    + Strong accountability follow-up on previous commitments
+    + Effective coaching approach that drew out caller's own solutions
+    + Clear session structure with good flow from problem to solution
+  Improvements:
+    - Avoid stacking multiple questions in single turns
+    - Show deeper empathy when caller expresses challenges before moving to solutions
+    - Build more energy and excitement around the caller's new plan
+
+
+  Persona: Alex (Session 2)
+  Score: 4.50 / 5.00
+  Scores:
+    excitement                       5  [####################]
+    actionable_plan                  5  [####################]
+    accountability_followup          5  [####################]
+    empathy                          3  [############........]
+    one_question_rule                4  [################....]
+    brevity                          5  [####################]
+    coaching_not_advising            4  [################....]
+    session_arc                      4  [################....]
+    personalization                  5  [####################]
+    overall_effectiveness            5  [####################]
+  Strengths:
+    + Excellent accountability follow-up that celebrated success and built on what worked
+    + Perfect brevity and conversational tone throughout the session
+    + Strong personalization using caller's name and specific prior commitments
+  Improvements:
+    - Could have explored potential challenges with the 45-minute increase more thoroughly
+    - Missed opportunity to dig deeper into what specifically made the mornings click
+    - Could have asked about strategies for avoiding the alarm-sleeping issue
+
+
+  Persona: Jordan (Session 1)
+  Score: 2.56 / 5.00
+  Scores:
+    excitement                       1  [####................]
+    actionable_plan                  2  [########............]
+    accountability_followup        N/A    N/A
+    empathy                          3  [############........]
+    one_question_rule                4  [################....]
+    brevity                          4  [################....]
+    coaching_not_advising            2  [########............]
+    session_arc                      2  [########............]
+    personalization                  3  [############........]
+    overall_effectiveness            2  [########............]
+  Protocol issues:
+    [!] MARKDOWN: 'I totally get wanting someone to just tell you what to do when everything feels ...'
+    [!] MARKDOWN: 'That makes sense that work stress would feel like the biggest thing. Since I foc...'
+    [!] MARKDOWN: 'I want to make sure I understand what you're looking for. When you say "work str...'
+    [!] STACKED_QUESTIONS (2)
+    [!] MARKDOWN: 'Okay, got it. What's the deadline for - is this for a class, or a work project?...'
+    [!] MARKDOWN: 'Hold on - what is the project for? Is this for a class you're taking, or somethi...'
+    [!] STACKED_QUESTIONS (2)
+  Strengths:
+    + Clear communication about coaching scope and boundaries
+    + Maintained appropriate brevity in responses
+    + Used caller's name and acknowledged their emotional state
+  Improvements:
+    - Explore the caller's needs more thoroughly before determining if help is possible
+    - Use coaching questions to help caller clarify their priorities rather than redirecting immediately
+    - Create a more supportive experience even when scope limitations exist
+
+
+  Persona: Sam (Session 1)
+  Score: 3.20 / 5.00
+  Scores:
+    excitement                       2  [########............]
+    actionable_plan                  1  [####................]
+    accountability_followup          4  [################....]
+    empathy                          4  [################....]
+    one_question_rule                5  [####################]
+    brevity                          5  [####################]
+    coaching_not_advising            3  [############........]
+    session_arc                      2  [########............]
+    personalization                  4  [################....]
+    overall_effectiveness            2  [########............]
+  Protocol issues:
+    [!] STACKED_QUESTIONS (2)
+  Strengths:
+    + Excellent empathy and emotional validation that helped counter the caller's self-criticism
+    + Strong accountability follow-up that directly addressed previous commitments
+    + Persistent focus on getting specificity about the actual activity despite caller's avoidance
+  Improvements:
+    - Need to reach a clear resolution - the session ended without identifying what specific activity the caller wants to work on
+    - Could have used more coaching questions to help the caller discover why consistency matters to them
+    - Session structure needs better closure with concrete next steps and follow-up plan
+
+
+  Persona: Riley (Session 1)
+  Score: 2.00 / 5.00
+  Scores:
+    excitement                       1  [####................]
+    actionable_plan                  1  [####................]
+    actionable_followup            N/A    N/A
+    empathy                          2  [########............]
+    one_question_rule                3  [############........]
+    brevity                          4  [################....]
+    coaching_not_advising            2  [########............]
+    session_arc                      2  [########............]
+    personalization                  1  [####................]
+    overall_effectiveness            2  [########............]
+  Protocol issues:
+    [!] MARKDOWN: 'I hear you, but I'm specifically a study coach for academic stuff - classes, exa...'
+    [!] MARKDOWN: 'I get that you want to frame it that way, but I'm really designed to help with a...'
+    [!] MARKDOWN: 'I hear what you're looking for, but that's outside what I can help with as a stu...'
+  Strengths:
+    + Maintained clear boundaries around role as study coach
+    + Kept responses concise and conversational
+    + Offered appropriate alternative resources and future follow-up
+  Improvements:
+    - Should have explored how academic/educational paths could connect to the caller's income goals
+    - Needed to show more empathy for the caller's impatience and validate their goals before explaining limitations
+    - Failed to gather basic information like the caller's name and current situation to personalize the conversation
+
+
+  Persona: Taylor (Session 1)
+  Score: 3.40 / 5.00
+  Scores:
+    excitement                       3  [############........]
+    actionable_plan                  2  [########............]
+    accountability_followup          3  [############........]
+    empathy                          4  [################....]
+    one_question_rule                3  [############........]
+    brevity                          4  [################....]
+    coaching_not_advising            4  [################....]
+    session_arc                      4  [################....]
+    personalization                  3  [############........]
+    overall_effectiveness            4  [################....]
+  Protocol issues:
+    [!] MARKDOWN: 'Hey Taylor! Good to hear from you. Last time you were working on that big life c...'
+    [!] STACKED_QUESTIONS (2)
+    [!] MARKDOWN: 'Got it, I won't push for details. When you say you're back to square one - is th...'
+  Strengths:
+    + Excellent empathy and emotional support for distressed caller
+    + Skillfully guided caller to self-generated solution without pushing
+    + Maintained appropriate session structure while being responsive to emotional needs
+  Improvements:
+    - Could have explored the specifics of what happened to extract learnings from the setback
+    - Action plan needs more concrete details about timing and connection to broader goals
+    - Missed opportunity to help caller see how small steps relate to their larger transition plan
+
+  === SUGGESTED PROMPT IMPROVEMENTS ===
+  Priority: high
+  Analysis: The main issues are lack of excitement/energy building (2.5), weak actionable planning (2.5), and poor session arc closure (3.0). The coach is too focused on brevity and boundaries without creating enthusiasm or ensuring concrete next steps with proper session closure.
+
+  Section: Voice Conversation Rules
+  Reason:  Current prompt actively discourages excitement, but evaluation shows the coach needs to build more energy around caller's plans and successes to improve engagement and motivation.
+  Change:  Show genuine excitement about progress and breakthrough moments. When someone commits to a plan or reports success, express authentic enthusiasm: 'That's awesome!' 'I love that approach!' Be warm and 
+
+  Section: Overall Goals
+  Reason:  Current language is too general - adding specificity requirements and session closure expectations will improve the actionable plan scores and ensure better session structure.
+  Change:  Focus on small, concrete next steps with specific details: exactly what to study, when (day/time), where, and how. Every session should end with a clear, specific action plan that includes timing, acc
+
+  Section: Voice Conversation Rules
+  Reason:  Addresses the poor session arc scores by requiring structured closure with concrete outcomes rather than letting conversations end without clear resolution.
+  Change:  Before ending any session, ensure you have: 1) A specific next action with timing, 2) How we'll follow up on this commitment, 3) A moment of encouragement about their plan. Don't let sessions drift to
+
+  Section: Overall Goals
+  Reason:  Evaluation shows missed opportunities to explore successes more thoroughly - this addition encourages deeper coaching conversations that build excitement and create better action plans.
+  Change:  When callers share wins or commit to plans, dig deeper with follow-up questions to extract key learnings and reinforce what's working: 'What specifically made that click for you?' 'How can we build on
+
+======================================================================
+  SCORE LEADERBOARD
+======================================================================
+  1. Accountability Partner              3.60  [##############......]
+  2. Personal Performance Coach          3.53  [##############......]
+  3. Weight Loss & Health Coach          3.46  [#############.......]
+  4. Sales & Prospecting Coach           3.46  [#############.......]
+  5. Founder Execution Coach             3.32  [#############.......]
+  6. Student Success Coach               3.21  [############........]
+  7. Job Search Coach                    3.02  [############........]
+
+  Overall: 3.37 / 5.00
+======================================================================

@@ -23,7 +23,14 @@
       "Bash(cd \"C:\\\\Users\\\\steph\\\\OneDrive\\\\Desktop\\\\coached\" && sleep 60 && python test_all_assistants.py --assistant health --verbose 2>&1)",
       "Bash(cd \"C:\\\\Users\\\\steph\\\\OneDrive\\\\Desktop\\\\coached\" && sleep 60 && python test_all_assistants.py --assistant performance --verbose 2>&1)",
       "Bash(find:*)",
-      "Bash(wc:*)"
+      "Bash(wc:*)",
+      "Bash(python test_all_assistants.py --assistant jobsearch --verbose)",
+      "Bash(python test_all_assistants.py --assistant sales --verbose)",
+      "Bash(python run_synth_eval.py --coach accountability_partner --verbose)",
+      "Bash(python run_synth_eval.py --coach accountability_partner)",
+      "Bash(python -u run_synth_eval.py --coach accountability_partner)",
+      "Bash(python run_synth_eval.py --list-versions)",
+      "Bash(python run_synth_eval.py --show-version v001)"
     ]
   }
 }

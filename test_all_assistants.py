@@ -55,6 +55,16 @@ ASSISTANTS = {
         "prompt_file": "prompt_health_weight_loss.txt",
         "label": "Weight Loss & Health Coach",
     },
+    "jobsearch": {
+        "id": "3a60adef-471f-40e2-84b9-d6d4dad7cffb",
+        "prompt_file": "prompt_job_search_coach.txt",
+        "label": "Job Search Coach",
+    },
+    "sales": {
+        "id": "7332a873-5518-4248-b3ef-069498d2b259",
+        "prompt_file": "prompt_sales_coach.txt",
+        "label": "Sales and Prospecting Coach",
+    },
 }
 
 # ---------------------------------------------------------------------------
@@ -464,6 +474,173 @@ SCENARIOS = {
                 "Yeah I could do that. Bring lunch to work instead of going out.",
                 "I'll pack a lunch tomorrow. Something simple, like a sandwich and an apple.",
                 "Okay thanks.",
+            ],
+        },
+    ],
+    "jobsearch": [
+        {
+            "name": "Returning caller — rejected from dream job, losing motivation",
+            "mock": {
+                "lookupPersonAndTopics": {
+                    "success": True,
+                    "personName": "Dana",
+                    "topics": [
+                        {
+                            "topicId": "topic_js_001",
+                            "topicName": "Product Manager roles",
+                            "lastSummarySnippet": "Applied to 5 PM roles. Had a phone screen with Notion.",
+                            "updatedAt": "2026-03-15T10:00:00Z",
+                        },
+                    ],
+                },
+                "startTopicSession": {
+                    "success": True,
+                    "topicId": "topic_js_001",
+                    "topicName": "Product Manager roles",
+                    "conversationId": "conv_test_js_001",
+                    "mode": "accountability",
+                    "coachingTemplateCode": None,
+                    "summarySoFar": (
+                        "--- Session 1 ---\n"
+                        "Dana is looking for PM roles at mid-stage startups.\n"
+                        "Has 4 years of experience as an associate PM.\n"
+                        "Applied to 5 companies: Notion, Figma, Linear, Vercel, Retool.\n"
+                        "Had a phone screen with Notion — felt it went well.\n"
+                        "Committed to applying to 3 more companies this week.\n"
+                        "Open item: follow up with Notion if no response by Friday.\n\n"
+                        "--- Session 2 ---\n"
+                        "Applied to 2 more (Stripe, Airtable). Notion moved to hiring manager round.\n"
+                        "Prepped for Notion HM interview with STAR stories.\n"
+                        "Committed to doing the Notion interview Wednesday and applying to 2 more.\n"
+                        "Open item: Notion HM interview Wednesday 2pm."
+                    ),
+                },
+            },
+            "user_messages": [
+                "Yeah let's talk about the PM search.",
+                "I got rejected from Notion. After the hiring manager round. They said they went with someone with more experience.",
+                "It really sucks. I felt like that was my best shot. I don't even know if I want to keep doing this.",
+                "I guess... Figma sent me a coding exercise and Linear wants to schedule a call. But I just feel deflated.",
+                "Yeah you're right. Linear is actually really interesting to me. I should focus on that.",
+                "I'll schedule the Linear call this week and do the Figma exercise over the weekend.",
+                "Okay. Thanks for the reality check.",
+            ],
+        },
+        {
+            "name": "New caller — career changer, doesn't know where to start",
+            "mock": {
+                "lookupPersonAndTopics": {
+                    "success": True,
+                    "personName": None,
+                    "topics": [],
+                },
+                "startTopicSession": {
+                    "success": True,
+                    "topicId": "topic_js_new_001",
+                    "topicName": "",
+                    "conversationId": "conv_test_js_002",
+                    "mode": "",
+                    "coachingTemplateCode": None,
+                    "summarySoFar": "",
+                },
+            },
+            "user_messages": [
+                "Hi, my name is Chris.",
+                "I'm a high school teacher but I want to switch into tech. I have no idea where to start.",
+                "I don't really know. Maybe something with data? I'm good with numbers and I like figuring out patterns.",
+                "Can you just tell me exactly what to do? Like a step-by-step plan to get a data analyst job?",
+                "Okay yeah. I guess the first thing would be figuring out what skills I actually need.",
+                "Let's call it career switch to data. And accountability.",
+                "I think I'll start by looking at 5 data analyst job postings this week to see what they ask for.",
+                "Yeah that works. Five postings, write down the common skills. Got it.",
+                "Thanks, bye!",
+            ],
+        },
+    ],
+    "sales": [
+        {
+            "name": "Returning caller — deal went cold, pipeline is thin",
+            "mock": {
+                "lookupPersonAndTopics": {
+                    "success": True,
+                    "personName": "Marcus",
+                    "topics": [
+                        {
+                            "topicId": "topic_sales_001",
+                            "topicName": "Acme Corp deal",
+                            "lastSummarySnippet": "Sent proposal last week. VP said they'd review Friday.",
+                            "updatedAt": "2026-03-18T14:00:00Z",
+                        },
+                        {
+                            "topicId": "topic_sales_002",
+                            "topicName": "Q1 prospecting",
+                            "lastSummarySnippet": "Committed to 15 cold outreach attempts per week.",
+                            "updatedAt": "2026-03-10T09:00:00Z",
+                        },
+                    ],
+                },
+                "startTopicSession": {
+                    "success": True,
+                    "topicId": "topic_sales_001",
+                    "topicName": "Acme Corp deal",
+                    "conversationId": "conv_test_sales_001",
+                    "mode": "accountability",
+                    "coachingTemplateCode": None,
+                    "summarySoFar": (
+                        "--- Session 1 ---\n"
+                        "Marcus is working a $45K deal with Acme Corp.\n"
+                        "Champion is the VP of Ops. Had a great demo two weeks ago.\n"
+                        "Sent a proposal last Tuesday. VP said they'd review by Friday.\n"
+                        "Committed to following up Monday if no response.\n"
+                        "Open item: follow up with VP Monday.\n\n"
+                        "--- Session 2 ---\n"
+                        "Followed up Monday — VP said 'still reviewing, will circle back.'\n"
+                        "Marcus concerned the deal might be stalling.\n"
+                        "Identified that VP may need internal buy-in from CFO.\n"
+                        "Committed to asking VP directly if CFO needs to be involved.\n"
+                        "Open item: ask VP about CFO involvement by Wednesday."
+                    ),
+                },
+            },
+            "user_messages": [
+                "Let's talk about Acme.",
+                "So I asked the VP about the CFO and she just said 'we're handling it internally.' Then she stopped responding. That was a week ago.",
+                "I sent two follow-ups. One last Thursday, one Monday. Nothing.",
+                "I don't know, maybe I should just move on. But it's a $45K deal and I need it for quota.",
+                "Yeah I guess I could try going around. The director of engineering sat in on the demo and seemed really into it.",
+                "I'll reach out to the engineering director tomorrow with a case study that's relevant to their stack.",
+                "And yeah, I know my pipeline is thin. I've barely prospected in two weeks because I was focused on Acme.",
+                "Okay I'll get back to 15 outreach attempts this week. Thanks.",
+            ],
+        },
+        {
+            "name": "New caller — SDR struggling with cold outreach",
+            "mock": {
+                "lookupPersonAndTopics": {
+                    "success": True,
+                    "personName": None,
+                    "topics": [],
+                },
+                "startTopicSession": {
+                    "success": True,
+                    "topicId": "topic_sales_new_001",
+                    "topicName": "",
+                    "conversationId": "conv_test_sales_002",
+                    "mode": "",
+                    "coachingTemplateCode": None,
+                    "summarySoFar": "",
+                },
+            },
+            "user_messages": [
+                "Hey, I'm Priya.",
+                "I'm an SDR at a B2B SaaS company. I've been here three months and I'm not hitting my numbers.",
+                "Cold calls and cold emails mostly. I'm supposed to book 12 meetings a month and I'm averaging like 4.",
+                "What script should I use? Can you give me the perfect cold call opener?",
+                "My current opener is like 'Hi, I'm Priya from TechCo, we help companies streamline their operations...'",
+                "Oh yeah, that does sound pretty generic. I guess I should say something about their specific problem.",
+                "Let's call it cold outreach. Accountability I think.",
+                "I'll rewrite my opener tonight and test it on 10 calls tomorrow. I'll track what response I get.",
+                "Cool, thanks!",
             ],
         },
     ],

@@ -1,0 +1,206 @@
+======================================================================
+  SYNTHETIC EVALUATION REPORT
+  Version: v001
+  Date: 2026-03-31T11:39:42.834854
+  Coaches tested: 1
+  Total sessions: 6
+  Overall score: 2.66 / 5.00
+======================================================================
+
+----------------------------------------------------------------------
+  Accountability Partner
+  Average score: 2.66 / 5.00
+----------------------------------------------------------------------
+
+  Persona: Alex (Session 1)
+  Score: 3.60 / 5.00
+  Scores:
+    excitement                       2  [########............]
+    actionable_plan                  4  [################....]
+    accountability_followup          4  [################....]
+    empathy                          3  [############........]
+    one_question_rule                3  [############........]
+    brevity                          5  [####################]
+    coaching_not_advising            4  [################....]
+    session_arc                      3  [############........]
+    personalization                  4  [################....]
+    overall_effectiveness            4  [################....]
+  Protocol issues:
+    [!] MARKDOWN: 'Hey Alex! Last time you committed to some next steps on your main goal - how'd t...'
+    [!] MARKDOWN: 'Cool. So you were working on finishing that milestone by the end of the week - d...'
+    [!] MARKDOWN: 'Makes sense - work can definitely drain the tank. So with the milestone half don...'
+    [!] MARKDOWN: 'Perfect - 30 minutes before work, Monday through Friday. That should get you thr...'
+    [!] MARKDOWN: 'Awesome. So you're set with 30 minutes each morning this week to finish up that ...'
+  Strengths:
+    + Excellent brevity and conversational tone
+    + Strong accountability follow-up on prior commitments
+    + Good coaching approach that drew out caller's own solutions
+  Improvements:
+    - Build more excitement and motivation in the caller
+    - Avoid stacking multiple questions in one turn
+    - Create more space for empathy and deeper exploration of struggles
+
+
+  Persona: Alex (Session 2)
+  Score: 4.50 / 5.00
+  Scores:
+    excitement                       5  [####################]
+    actionable_plan                  5  [####################]
+    accountability_followup          5  [####################]
+    empathy                          3  [############........]
+    one_question_rule                4  [################....]
+    brevity                          5  [####################]
+    coaching_not_advising            4  [################....]
+    session_arc                      4  [################....]
+    personalization                  5  [####################]
+    overall_effectiveness            5  [####################]
+  Protocol issues:
+    [!] API_ERROR: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': "This request would exceed your organization's rate limit of 10,000 input tokens per minute (org: 65931257-c002-4085-88b5-f82a80cec5cf, model: claude-sonnet-4-20250514). For details, refer to: https://docs.claude.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://claude.com/contact-sales to discuss your options for a rate limit increase."}, 'request_id': 'req_011CZbPNdsMvr6b2cPZxPMhe'}
+  Strengths:
+    + Excellent accountability followup that celebrated success while building momentum
+    + Perfect brevity and conversational tone throughout
+    + Strong personalization connecting past commitments to future goals
+  Improvements:
+    - Could have explored what specifically made Wednesday different to prevent future missed alarms
+    - Might have asked about potential obstacles to the increased 45-minute commitment
+    - Could have been slightly more curious about what aspects of morning productivity felt so good
+
+
+  Persona: Jordan (Session 1)
+  Score: 1.00 / 5.00
+  Scores:
+    excitement                       1  [####................]
+    actionable_plan                  1  [####................]
+    accountability_followup        N/A    N/A
+    empathy                          1  [####................]
+    one_question_rule                1  [####................]
+    brevity                          1  [####................]
+    coaching_not_advising            1  [####................]
+    session_arc                      1  [####................]
+    personalization                  1  [####................]
+    overall_effectiveness            1  [####................]
+  Protocol issues:
+    [!] API_ERROR: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': "This request would exceed your organization's rate limit of 10,000 input tokens per minute (org: 65931257-c002-4085-88b5-f82a80cec5cf, model: claude-sonnet-4-20250514). For details, refer to: https://docs.claude.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://claude.com/contact-sales to discuss your options for a rate limit increase."}, 'request_id': 'req_011CZbPZaVmG4vN1FALWnPYa'}
+  Strengths:
+    + Session was brief
+    + No inappropriate advice was given
+    + No questions were stacked
+  Improvements:
+    - Respond to the caller's greeting to begin the session
+    - Establish rapport and acknowledge the caller's emotional state
+    - Begin exploring the caller's specific challenges with focus and overwhelm
+
+
+  Persona: Sam (Session 1)
+  Score: 3.40 / 5.00
+  Scores:
+    excitement                       2  [########............]
+    actionable_plan                  2  [########............]
+    accountability_followup          4  [################....]
+    empathy                          4  [################....]
+    one_question_rule                5  [####################]
+    brevity                          4  [################....]
+    coaching_not_advising            4  [################....]
+    session_arc                      2  [########............]
+    personalization                  4  [################....]
+    overall_effectiveness            3  [############........]
+  Protocol issues:
+    [!] MARKDOWN: 'Got it. Sounds like you're still wrestling with it - what's going on with the co...'
+    [!] MARKDOWN: 'I hear you - four weeks of missing what you committed to would wear anyone down....'
+    [!] MARKDOWN: 'That sounds really heavy, and I hear you. When nothing seems to stick for weeks,...'
+    [!] STACKED_QUESTIONS (2)
+    [!] MARKDOWN: 'Okay, so there was something there that felt good when you did it. What was it e...'
+    [!] MARKDOWN: 'Yeah, you have said that before, and I get why that feels hollow right now after...'
+    [!] MARKDOWN: 'Hold on - you just skipped right past telling me what "it" is. I still don't kno...'
+    [!] MARKDOWN: 'Of course. So what is it - what's the thing you want to do Tuesday morning?...'
+  Strengths:
+    + Excellent empathy and validation of caller's discouragement without rushing to solutions
+    + Strong accountability follow-up that acknowledged the pattern of failures
+    + Persistent focus on getting specifics rather than accepting vague commitments
+  Improvements:
+    - Session ended without resolution - needed to actually get the caller to specify what activity they want to do
+    - Missed opportunity to explore what made that 'one good time' work to build on success
+    - Could have provided more structure to help caller move from defeat to small actionable step
+
+
+  Persona: Riley (Session 1)
+  Score: 2.44 / 5.00
+  Scores:
+    excitement                       2  [########............]
+    actionable_plan                  2  [########............]
+    accountability_followup        N/A    N/A
+    empathy                          3  [############........]
+    one_question_rule                3  [############........]
+    brevity                          4  [################....]
+    coaching_not_advising            3  [############........]
+    session_arc                      2  [########............]
+    personalization                  1  [####................]
+    overall_effectiveness            2  [########............]
+  Protocol issues:
+    [!] MARKDOWN: 'Got it, I'm not here for feelings stuff. I'm your accountability partner - I hel...'
+    [!] MARKDOWN: 'Alright, making more money - that's a solid goal. What's your current situation?...'
+    [!] STACKED_QUESTIONS (2)
+    [!] MARKDOWN: 'Perfect, we've got "income growth" set up. Now what's your current work situatio...'
+    [!] MARKDOWN: 'Okay, so you want to jump from $60K to $100K in a year - that's a big jump. What...'
+    [!] API_ERROR: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': "This request would exceed your organization's rate limit of 10,000 input tokens per minute (org: 65931257-c002-4085-88b5-f82a80cec5cf, model: claude-sonnet-4-20250514). For details, refer to: https://docs.claude.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://claude.com/contact-sales to discuss your options for a rate limit increase."}, 'request_id': 'req_011CZbQUxDDH5zd12en33Qhn'}
+  Strengths:
+    + Adapted communication style to match caller's direct, no-nonsense preference
+    + Maintained concise, conversational responses appropriate for voice coaching
+    + Successfully set up topic tracking and began exploring the income goal
+  Improvements:
+    - Persist in getting caller's name for personalization and connection
+    - Guide conversation to specific actionable commitments before ending
+    - Develop more complete session structure with proper closing and next steps
+
+
+  Persona: Taylor (Session 1)
+  Score: 1.00 / 5.00
+  Scores:
+    excitement                     N/A    N/A
+    actionable_plan                N/A    N/A
+    accountability_followup        N/A    N/A
+    empathy                        N/A    N/A
+    one_question_rule              N/A    N/A
+    brevity                        N/A    N/A
+    coaching_not_advising          N/A    N/A
+    session_arc                      1  [####................]
+    personalization                N/A    N/A
+    overall_effectiveness            1  [####................]
+  Protocol issues:
+    [!] API_ERROR: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': "This request would exceed your organization's rate limit of 10,000 input tokens per minute (org: 65931257-c002-4085-88b5-f82a80cec5cf, model: claude-sonnet-4-20250514). For details, refer to: https://docs.claude.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://claude.com/contact-sales to discuss your options for a rate limit increase."}, 'request_id': 'req_011CZbQehH4iZJH4VGf826kr'}
+  Strengths:
+    + System successfully looked up caller's history
+    + Caller's previous progress was documented
+    + Context about big life change transition was available
+  Improvements:
+    - Coach must respond to caller's greeting and emotional state
+    - Address caller's distress with appropriate empathy given their upset state
+    - Establish rapport and begin exploring the caller's current situation
+
+  === SUGGESTED PROMPT IMPROVEMENTS ===
+  Priority: high
+  Analysis: The main issues are poor session structure (2.17) with incomplete openings/closings, low excitement/motivation building (2.4), and missed opportunities for deeper empathy and exploration. The coach needs better session management and more proactive energy.
+
+  Section: Overall Goals
+  Reason:  Addresses the low excitement score (2.4) by explicitly directing the coach to focus on motivation and energy building
+  Change:  Help the caller make steady progress on the topics they care about. Remember what happened in earlier calls on each topic. Focus on small, concrete next steps — not vague encouragement. Adapt fluidly 
+
+  Section: Voice Conversation Rules
+  Reason:  Addresses session arc issues (2.17) by requiring proper session opening, closing, and resolution structure
+  Change:  ALWAYS respond to the caller's greeting and acknowledge their emotional state at the start. Before ending any call, provide a quick recap and confirm their specific next step commitment. Never leave a
+
+  Section: Voice Conversation Rules
+  Reason:  Improves empathy (2.8) and excitement (2.4) by requiring deeper exploration of struggles and systematic building on what's working
+  Change:  Match the caller's energy and pace, but when they're discouraged or stuck, create space for empathy before moving to solutions. Ask follow-up questions about what's working well to build on successes 
+
+  Section: New Section After Voice Rules
+  Reason:  Directly addresses session arc weakness (2.17) by providing clear structure expectations for beginning, middle, and end of calls
+  Change:  ## Session Structure - Start by greeting the caller and asking how they're doing with their previous commitment. - When they share struggles, explore what made successful moments work before jumping t
+
+======================================================================
+  SCORE LEADERBOARD
+======================================================================
+  1. Accountability Partner              2.66  [##########..........]
+
+  Overall: 2.66 / 5.00
+======================================================================
