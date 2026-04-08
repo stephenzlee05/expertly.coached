@@ -129,3 +129,84 @@ Return ONLY the JSON."""
             "suggested_changes": [],
             "priority": "unknown",
         }
+
+
+def _is_missing_current(current: str) -> bool:
+    """True when the improver indicates new content rather than a verbatim replace."""
+    if not current or not str(current).strip():
+        return True
+    c = str(current).strip().upper()
+    if c.startswith("MISSING"):
+        return True
+    if c in ("N/A", "NONE", "NULL"):
+        return True
+    return False
+
+
+def apply_improvements_to_prompt(
+    current_prompt: str,
+    improvement_dict: dict,
+) -> tuple[str, list[str]]:
+    """Apply suggested_changes from suggest_improvements() to a system prompt.
+
+    - For MISSING / N/A / empty *current*, append *suggested* to the prompt.
+    - Otherwise replace the first occurrence of *current* with *suggested*.
+
+    Returns:
+        (updated_prompt, log_lines)
+    """
+    notes: list[str] = []
+    if not improvement_dict:
+        return current_prompt, ["No improvement dict; prompt unchanged."]
+    changes = improvement_dict.get("suggested_changes") or []
+    if not changes:
+        return current_prompt, ["No suggested_changes; prompt unchanged."]
+
+    text = current_prompt
+    for i, ch in enumerate(changes, 1):
+        section = (ch.get("section") or "").strip()
+        current = ch.get("current") or ""
+        suggested = (ch.get("suggested") or "").strip()
+        if not suggested:
+            notes.append(f"Change {i}: skipped (empty suggested) [{section[:50]}]")
+            continue
+
+        if _is_missing_current(current):
+            sep = "\n\n" if text.strip() else ""
+            text = text.rstrip() + sep + suggested + "\n"
+            notes.append(f"Change {i}: appended ({section[:60] or 'MISSING'})")
+            continue
+
+        cur = str(current).strip()
+        if cur in text:
+            text = text.replace(cur, suggested, 1)
+            notes.append(f"Change {i}: replaced ({len(cur)} chars)")
+            continue
+
+        notes.append(
+            f"Change {i}: SKIPPED — substring not found in prompt [{section[:50]}]"
+        )
+
+    return text, notes
+
+
+def apply_improvements_to_assistants(coaches: dict, report: dict) -> dict[str, list[str]]:
+    """Write improvement_suggestions from a run report to each coach's prompt file.
+
+    Mutates ``coaches[slug]['prompt_text']`` when the text changes. Only assistants
+    present in ``report['assistant_results']`` are updated.
+    """
+    out: dict[str, list[str]] = {}
+    for ar in report.get("assistant_results", []):
+        slug = ar.get("assistant_key")
+        if not slug or slug not in coaches:
+            continue
+        imps = ar.get("improvement_suggestions") or {}
+        old = coaches[slug]["prompt_text"]
+        new_text, notes = apply_improvements_to_prompt(old, imps)
+        if new_text != old:
+            coaches[slug]["prompt_text"] = new_text
+            coaches[slug]["prompt_file"].write_text(new_text, encoding="utf-8")
+            notes.append(f"Wrote {coaches[slug]['prompt_file']}")
+        out[slug] = notes
+    return out

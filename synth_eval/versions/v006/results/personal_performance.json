@@ -1,0 +1,898 @@
+{
+  "assistant_key": "personal_performance",
+  "assistant_label": "Personal Performance Coach",
+  "session_results": [
+    {
+      "persona_id": "returning_motivated",
+      "persona_name": "Alex",
+      "session_num": 1,
+      "turn_count": 9,
+      "transcript": [
+        {
+          "role": "caller",
+          "text": "Hello?"
+        },
+        {
+          "role": "coach",
+          "text": "Let me pull up your info real quick."
+        },
+        {
+          "role": "tool",
+          "text": "[lookupPersonAndTopics] -> {\"success\": true, \"personName\": \"Alex\", \"topics\": [{\"topicId\": \"topic_001\", \"topicName\": \"Main goal\", \"lastSummarySnippet\": \"Made good progress last week. Committed to next steps.\", \"updatedAt\": \"2026"
+        },
+        {
+          "role": "coach",
+          "text": "Hey Alex, good to hear from you! I see you had some good momentum going on your main goal last week \u2014 how's that progressing?"
+        },
+        {
+          "role": "caller",
+          "text": "Hey, yeah let's talk about my main goal."
+        },
+        {
+          "role": "tool",
+          "text": "[startTopicSession] -> {\"success\": true, \"topicId\": \"topic_001\", \"topicName\": \"Main goal\", \"conversationId\": \"conv_synth_001\", \"mode\": \"mix\", \"coachingTemplateCode\": null, \"summarySoFar\": \"--- Session 1 ---\\nAlex is working"
+        },
+        {
+          "role": "coach",
+          "text": "Got it \u2014 so you committed to finishing that milestone by end of week. Did that happen?"
+        },
+        {
+          "role": "caller",
+          "text": "I got about halfway through what I said I'd do. Life got in the way a bit."
+        },
+        {
+          "role": "coach",
+          "text": "Yeah, that happens. What got in the way?"
+        },
+        {
+          "role": "caller",
+          "text": "Yeah, work was really busy and I just ran out of energy by the evenings."
+        },
+        {
+          "role": "coach",
+          "text": "Makes sense \u2014 sounds like work drained the tank before you had a chance to focus on this. Is that pretty typical for you, or was last week just heavier than usual?"
+        },
+        {
+          "role": "caller",
+          "text": "I think if I did it in the morning instead, I'd have more energy for it."
+        },
+        {
+          "role": "coach",
+          "text": "That makes sense \u2014 mornings are fresher. So what would that look like for you, like when in the morning and for how long?"
+        },
+        {
+          "role": "caller",
+          "text": "Okay, I'll commit to mornings this week. Thirty minutes before work, Monday through Friday."
+        },
+        {
+          "role": "coach",
+          "text": "Nice. So 30 minutes each morning before work \u2014 what does done look like by end of this week, like what will you have finished?"
+        },
+        {
+          "role": "caller",
+          "text": "Yeah that sounds good. Thanks!"
+        },
+        {
+          "role": "coach",
+          "text": "You got it, Alex. So 30 minutes every morning this week before work \u2014 you'll knock out the rest of that milestone. Talk soon!"
+        }
+      ],
+      "tool_calls": [
+        {
+          "name": "lookupPersonAndTopics",
+          "input": {
+            "assistantId": "default",
+            "callerPhone": "unknown"
+          },
+          "result": {
+            "success": true,
+            "personName": "Alex",
+            "topics": [
+              {
+                "topicId": "topic_001",
+                "topicName": "Main goal",
+                "lastSummarySnippet": "Made good progress last week. Committed to next steps.",
+                "updatedAt": "2026-03-25T10:00:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "name": "startTopicSession",
+          "input": {
+            "callerPhone": "unknown",
+            "topicId": "topic_001",
+            "mode": "mix"
+          },
+          "result": {
+            "success": true,
+            "topicId": "topic_001",
+            "topicName": "Main goal",
+            "conversationId": "conv_synth_001",
+            "mode": "mix",
+            "coachingTemplateCode": null,
+            "summarySoFar": "--- Session 1 ---\nAlex is working on a personal goal and made solid progress.\nCommitted to completing the next milestone by end of week.\nOpen item: finish milestone and report back."
+          }
+        }
+      ],
+      "protocol_flags": [],
+      "evaluation": {
+        "scores": {
+          "excitement": 2,
+          "actionable_plan": 3,
+          "accountability_followup": 3,
+          "empathy": 3,
+          "one_question_rule": 4,
+          "brevity": 5,
+          "coaching_not_advising": 3,
+          "session_arc": 3,
+          "personalization": 3,
+          "overall_effectiveness": 3
+        },
+        "explanations": {
+          "excitement": "Caller's energy was flat throughout. They said 'Yeah that sounds good. Thanks!' at the end, which reads as polite agreement rather than genuine motivation or enthusiasm. No indication they feel energized or excited about the new plan.",
+          "actionable_plan": "Plan has specifics (30 minutes, mornings, Monday-Friday) and a timeline (this week), but is missing success criteria. Coach never asked 'what does done look like by end of week' in a way that got a concrete answer about the milestone completion. Caller didn't articulate what they'll have finished.",
+          "accountability_followup": "Coach referenced the prior momentum ('good momentum going on your main goal last week') and asked directly about the commitment ('Did that happen?'). However, coach didn't explore what worked before, why this week was different, or build the new plan on learnings from the previous attempt. Follow-up was present but shallow.",
+          "empathy": "Coach acknowledged the situation ('Makes sense \u2014 sounds like work drained the tank') and validated it ('Yeah, that happens'). This is basic empathy but lacks depth. Coach moved quickly to problem-solving without much space for the caller to process or explore the barrier further.",
+          "one_question_rule": "Coach mostly adheres to single questions. The turn 'Got it \u2014 so you committed to finishing that milestone by end of week. Did that happen?' includes a statement and one question. One turn has two questions: 'So what would that look like for you, like when in the morning and for how long?' but this is a single question with clarifying follow-up, which is acceptable. Overall strong adherence.",
+          "brevity": "Every coach response is 1-2 sentences. Perfectly concise and suitable for voice conversation throughout the entire session.",
+          "coaching_not_advising": "Mixed performance. Coach asked good discovery questions ('What got in the way?', 'Is that pretty typical for you?', 'what would that look like?'). However, when caller said 'I think if I did it in the morning instead,' the coach affirmed and moved straight to logistics rather than exploring whether this was truly the caller's best idea or if there were other options. Some light advising elements present.",
+          "session_arc": "Session has opening (pulled up info, greeted), exploration (what got in the way, typical pattern?), and attempted commitment phase. However, the arc feels rushed. The session skips from problem identification to solution in just a few turns without much exploration or depth. Closing is clear but abrupt.",
+          "personalization": "Coach used the caller's name ('Hey Alex', 'Talk soon, Alex implied') and referenced the specific goal ('Main goal') and prior context ('good momentum last week'). Used specific details from the call (work, evenings, mornings, 30 minutes). Good but not deeply personalized \u2014 didn't connect current barriers to any pattern or strength from prior sessions.",
+          "overall_effectiveness": "Caller moved from a missed commitment to a new plan with specifics, which is progress. However, the new plan may be underexplored (is morning really the right lever? What else could help?), success criteria are undefined, and caller's motivation is visibly low. The session is functional but not transformative."
+        },
+        "strengths": [
+          "Excellent brevity and conciseness \u2014 every response was 1-2 sentences and conversational",
+          "Strong adherence to one-question-per-turn rule, making the conversation flow naturally",
+          "Good use of caller's name and specific context from prior sessions to build continuity",
+          "Asked direct discovery questions that helped caller identify their own insight (mornings vs. evenings)"
+        ],
+        "improvements": [
+          "Deepen accountability exploration \u2014 ask not just whether the commitment happened, but explore *why* it didn't and what worked before, then build new plan on those lessons",
+          "Strengthen empathy and space \u2014 when caller mentioned being drained, create more room for them to process rather than jumping straight to solutions; help them feel understood before pivoting",
+          "Define success criteria explicitly \u2014 ask 'what does done look like?' and get a concrete answer about what milestone completion entails, not just a vague affirmation",
+          "Build genuine motivation \u2014 caller's energy is flat; coach should check in on whether this plan feels truly motivating to them or explore what would energize them about the goal"
+        ],
+        "summary": "This session demonstrates solid foundational coaching skills \u2014 excellent brevity, clean structure, and appropriate use of discovery questions \u2014 but lacks depth and emotional resonance. The coach moved too quickly from problem identification to a new plan without fully exploring what didn't work before or ensuring the caller feels genuinely motivated. While a specific new commitment emerged, the caller's flat energy and missing success criteria suggest the session may not drive meaningful follow-through.",
+        "overall_score": 3.2
+      }
+    },
+    {
+      "persona_id": "returning_motivated",
+      "persona_name": "Alex",
+      "session_num": 2,
+      "turn_count": 9,
+      "transcript": [
+        {
+          "role": "caller",
+          "text": "Hello?"
+        },
+        {
+          "role": "coach",
+          "text": "Let me pull up your info really quick."
+        },
+        {
+          "role": "tool",
+          "text": "[lookupPersonAndTopics] -> {\"success\": true, \"personName\": \"Alex\", \"topics\": [{\"topicId\": \"topic_001\", \"topicName\": \"Main goal\", \"lastSummarySnippet\": \"Switched to mornings. Committed to 30 min before work Mon-Fri.\", \"updatedAt"
+        },
+        {
+          "role": "coach",
+          "text": "Hey Alex, good to hear from you. How'd that morning routine go \u2014 you were doing 30 minutes before work?"
+        },
+        {
+          "role": "caller",
+          "text": "Hey! Let's check in on my goal."
+        },
+        {
+          "role": "coach",
+          "text": "Cool, let me pull up where we left off."
+        },
+        {
+          "role": "tool",
+          "text": "[startTopicSession] -> {\"success\": true, \"topicId\": \"topic_001\", \"topicName\": \"Main goal\", \"conversationId\": \"conv_synth_002\", \"mode\": \"accountability\", \"coachingTemplateCode\": null, \"summarySoFar\": \"--- Session 1 ---\\nAlex"
+        },
+        {
+          "role": "coach",
+          "text": "Got it. So you switched to mornings and committed to 30 minutes before work Monday through Friday \u2014 how'd that actually go?"
+        },
+        {
+          "role": "caller",
+          "text": "I did four out of five mornings! Wednesday I slept through my alarm but otherwise it worked great."
+        },
+        {
+          "role": "coach",
+          "text": "Nice \u2014 that's solid. Four out of five is real progress, especially since mornings are tough to lock in.\n\nSo what's the move this week \u2014 do you want to keep going with the same routine, or adjust something after what you learned?"
+        },
+        {
+          "role": "caller",
+          "text": "Honestly it felt amazing. I'm way more productive in the morning."
+        },
+        {
+          "role": "coach",
+          "text": "That's great to hear. So are you committing to the same thing this week \u2014 30 minutes before work, Monday through Friday?"
+        },
+        {
+          "role": "caller",
+          "text": "I want to bump it up to 45 minutes and keep the same schedule."
+        },
+        {
+          "role": "coach",
+          "text": "Got it \u2014 45 minutes before work, same five days. What makes you confident you can actually stick with 45 instead of 30?"
+        },
+        {
+          "role": "caller",
+          "text": "Yeah, 45 minutes Monday through Friday, before work. I'm excited about this."
+        },
+        {
+          "role": "coach",
+          "text": "Perfect. So 45 minutes Monday through Friday before work \u2014 that's your commitment this week. When do you want to check back in?"
+        },
+        {
+          "role": "caller",
+          "text": "Thanks, talk soon!"
+        },
+        {
+          "role": "coach",
+          "text": "Sounds good, Alex. Talk soon \u2014 keep riding that momentum!"
+        }
+      ],
+      "tool_calls": [
+        {
+          "name": "lookupPersonAndTopics",
+          "input": {
+            "assistantId": "default",
+            "callerPhone": "unknown"
+          },
+          "result": {
+            "success": true,
+            "personName": "Alex",
+            "topics": [
+              {
+                "topicId": "topic_001",
+                "topicName": "Main goal",
+                "lastSummarySnippet": "Switched to mornings. Committed to 30 min before work Mon-Fri.",
+                "updatedAt": "2026-03-28T10:00:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "name": "startTopicSession",
+          "input": {
+            "callerPhone": "unknown",
+            "topicId": "topic_001",
+            "mode": "accountability"
+          },
+          "result": {
+            "success": true,
+            "topicId": "topic_001",
+            "topicName": "Main goal",
+            "conversationId": "conv_synth_002",
+            "mode": "accountability",
+            "coachingTemplateCode": null,
+            "summarySoFar": "--- Session 1 ---\nAlex is working on a personal goal and made solid progress.\nCommitted to completing the next milestone by end of week.\nOpen item: finish milestone and report back.\n\n--- Session 2 ---\nGot halfway through the milestone. Work was busy.\nDecided to switch to mornings for more energy.\nCommitted to 30 min before work, Mon-Fri.\nOpen item: complete morning sessions Mon-Fri this week."
+          }
+        }
+      ],
+      "protocol_flags": [],
+      "evaluation": {
+        "scores": {
+          "excitement": 4,
+          "actionable_plan": 4,
+          "accountability_followup": 4,
+          "empathy": 3,
+          "one_question_rule": 4,
+          "brevity": 4,
+          "coaching_not_advising": 3,
+          "session_arc": 4,
+          "personalization": 3,
+          "overall_effectiveness": 4
+        },
+        "explanations": {
+          "excitement": "Alex ended the session saying 'I'm excited about this' and the coach reinforced momentum at close. Caller clearly energized by success and willing to increase commitment.",
+          "actionable_plan": "Plan is specific: 45 minutes, Monday-Friday, before work. Timeline for next check-in implied but not explicitly stated. Caller expressed confidence but coach didn't confirm success criteria or obstacles.",
+          "accountability_followup": "Coach directly referenced the prior 30-minute commitment, asked about results (4/5 mornings), and explored what worked before building the new commitment. Good use of prior session data.",
+          "empathy": "Coach acknowledged the Wednesday miss briefly ('mornings are tough to lock in') but didn't create much space for exploration. Moved quickly to forward momentum without deeply validating the effort or normalizing the struggle.",
+          "one_question_rule": "Coach asked mostly single questions. One exception: 'Got it \u2014 45 minutes before work, same five days. What makes you confident you can actually stick with 45 instead of 30?' This was appropriate and didn't violate the spirit of the rule.",
+          "brevity": "Responses were conversational and mostly 1-3 sentences. Coach kept things moving without excessive explanation.",
+          "coaching_not_advising": "Coach asked 'What's the move this week?' and 'What makes you confident?' which drew out Alex's own thinking. However, when Alex suggested 45 minutes, coach immediately confirmed without exploring potential obstacles or helping Alex test confidence more deeply.",
+          "session_arc": "Clear structure: opening with context lookup, accountability check-in, exploration of what worked, commitment to new goal, and close. Natural flow with all major phases present.",
+          "personalization": "Coach used Alex's name and pulled up prior session details. Referenced the specific 30-minute morning commitment and the Wednesday miss, but didn't deeply connect to Alex's broader context or celebrate the specific feeling ('way more productive') beyond surface acknowledgment.",
+          "overall_effectiveness": "Session moved the goal forward with a concrete commitment increase and clear accountability setup. Caller left motivated. However, coach didn't deeply explore confidence level for 45 minutes or identify potential barriers, which could affect follow-through."
+        },
+        "strengths": [
+          "Strong accountability follow-up that directly referenced prior commitment and explored results",
+          "Maintained brief, conversational tone throughout\u2014suitable for voice coaching",
+          "Natural session arc with clear opening, exploration, and commitment phases",
+          "Successfully drew out caller's own idea to increase to 45 minutes rather than prescribing it"
+        ],
+        "improvements": [
+          "When caller proposed increasing from 30 to 45 minutes, coach should have explored confidence and potential obstacles more deeply instead of quickly confirming",
+          "Empathy could be deeper\u2014acknowledge the effort more genuinely and normalize the difficulty of habit change before jumping to momentum",
+          "Explicit next check-in date/time should be confirmed, not just implied ('talk soon')",
+          "Could personalize more by referencing Alex's specific comment about being 'way more productive in the morning' and exploring why that matters"
+        ],
+        "summary": "This was a solid, well-structured session that successfully moved Alex from 30 to 45 minutes with clear accountability and maintained momentum. The coach demonstrated good follow-up on prior commitments and kept the conversation brief and actionable. However, the session missed an opportunity to deeply explore confidence in the new target and potential obstacles, and empathy could have been warmer and more validating of the effort involved.",
+        "overall_score": 3.7
+      }
+    },
+    {
+      "persona_id": "new_overwhelmed",
+      "persona_name": "Jordan",
+      "session_num": 1,
+      "turn_count": 11,
+      "transcript": [
+        {
+          "role": "caller",
+          "text": "Hello?"
+        },
+        {
+          "role": "coach",
+          "text": "Hey there! Let me pull up your info real quick."
+        },
+        {
+          "role": "tool",
+          "text": "[lookupPersonAndTopics] -> {\"success\": true, \"personName\": null, \"topics\": []}"
+        },
+        {
+          "role": "coach",
+          "text": "I'm your performance coach \u2014 I help you get clear on what matters, stay focused, and actually follow through. What's your name?"
+        },
+        {
+          "role": "caller",
+          "text": "Hi, I'm Jordan. First time calling."
+        },
+        {
+          "role": "coach",
+          "text": "Hey Jordan, good to have you here. So here's how this works \u2014 you can call me whenever you want to think through priorities, build better habits, or just figure out what to focus on next.\n\nWhat area of your work or life would you like to improve?"
+        },
+        {
+          "role": "caller",
+          "text": "I have like a million things going on and I can't focus on any of them."
+        },
+        {
+          "role": "coach",
+          "text": "That sounds overwhelming. What's the one thing that's weighing on you the most right now?"
+        },
+        {
+          "role": "caller",
+          "text": "Work stuff, personal projects, health goals, relationships... everything feels urgent."
+        },
+        {
+          "role": "coach",
+          "text": "I hear you \u2014 when everything feels urgent, nothing gets the focus it needs. Let me ask this: if you had to pick just one area to get some traction on in the next week or two, what would it be?"
+        },
+        {
+          "role": "caller",
+          "text": "Can you just tell me what to prioritize? I need someone to just give me the answer."
+        },
+        {
+          "role": "coach",
+          "text": "I get that \u2014 it's tempting to want someone to just decide for you. But here's the thing: I don't know your life well enough to tell you what matters most. You do.\n\nSo let me ask differently: what would feel like a real win for you by the end of next week?"
+        },
+        {
+          "role": "caller",
+          "text": "I guess... work is the thing that's causing the most stress right now."
+        },
+        {
+          "role": "coach",
+          "text": "Okay, work is the main pressure point. What specifically about work is stressing you out most \u2014 is it a project, a deadline, the volume of stuff, or something else?"
+        },
+        {
+          "role": "caller",
+          "text": "Let's call it work stress. And accountability."
+        },
+        {
+          "role": "coach",
+          "text": "Got it \u2014 so you want to focus on managing work stress and staying accountable to yourself on it. Before we dig in, what does that actually look like for you right now \u2014 what's the stress coming from?"
+        },
+        {
+          "role": "caller",
+          "text": "The biggest thing is I have a deadline next Friday and I haven't started."
+        },
+        {
+          "role": "coach",
+          "text": "Okay, that's concrete. What's the deadline for, and how much work is it realistically going to take?"
+        },
+        {
+          "role": "caller",
+          "text": "Yeah, I'll block off two hours tomorrow morning to start on the project. Just start."
+        },
+        {
+          "role": "coach",
+          "text": "Nice \u2014 two hours tomorrow morning is a solid move. What does \"start\" actually mean though \u2014 like, what will you have done by the end of those two hours?"
+        },
+        {
+          "role": "caller",
+          "text": "Okay, thanks. This helped."
+        },
+        {
+          "role": "coach",
+          "text": "Good \u2014 so you're starting tomorrow morning for two hours and you'll have a clear first draft or outline done by the end of it. You've got this, Jordan. Talk soon."
+        }
+      ],
+      "tool_calls": [
+        {
+          "name": "lookupPersonAndTopics",
+          "input": {
+            "assistantId": "default",
+            "callerPhone": "unknown"
+          },
+          "result": {
+            "success": true,
+            "personName": null,
+            "topics": []
+          }
+        }
+      ],
+      "protocol_flags": [],
+      "evaluation": {
+        "scores": {
+          "excitement": 2,
+          "actionable_plan": 3,
+          "accountability_followup": null,
+          "empathy": 3,
+          "one_question_rule": 3,
+          "brevity": 4,
+          "coaching_not_advising": 3,
+          "session_arc": 3,
+          "personalization": 2,
+          "overall_effectiveness": 3
+        },
+        "explanations": {
+          "excitement": "Jordan says 'Okay, thanks. This helped' but the tone is flat and resigned rather than energized. No indication of genuine motivation or excitement about the plan forward.",
+          "actionable_plan": "The plan has some specifics (two hours tomorrow morning) but is incomplete. The coach asked what 'start' means but never confirmed what the actual output would be. Caller didn't explicitly state confidence in the plan.",
+          "accountability_followup": "N/A \u2014 this is a first-time caller with no prior history to follow up on.",
+          "empathy": "Coach acknowledged the overwhelm ('That sounds overwhelming') and validated the feeling that 'when everything feels urgent, nothing gets the focus it needs.' However, the coach didn't deeply explore or normalize the struggle, and moved to problem-solving quickly.",
+          "one_question_rule": "Mostly followed the rule with occasional lapses. The coach asked 'What specifically about work is stressing you out most \u2014 is it a project, a deadline, the volume of stuff, or something else?' which stacks multiple options, though framed as one question. Generally stayed to one question per turn.",
+          "brevity": "Responses were generally concise and conversational, mostly 1-3 sentences. The opening explanation was slightly longer but appropriate for context-setting on a first call.",
+          "coaching_not_advising": "Mixed approach. The coach resisted telling Jordan what to prioritize ('I don't know your life well enough') but then when Jordan offered a commitment ('I'll block off two hours tomorrow'), the coach accepted it rather than deepening the exploration. More advising than coaching in the later part.",
+          "session_arc": "Clear structure: opening/rapport, exploration of the issue, narrowing to a specific problem (deadline), and a commitment. However, the closing felt abrupt and the plan wasn't fully clarified or locked in with confidence.",
+          "personalization": "Coach used Jordan's name a few times but didn't build much personal connection or reference specific details beyond what was shared in this session. The advice was fairly generic.",
+          "overall_effectiveness": "Helped Jordan move from 'everything is overwhelming' to identifying one concrete task (the deadline project) and committing to two hours tomorrow. However, the plan lacks specificity on outcomes, and Jordan's emotional state didn't noticeably improve. Moderately helpful but room for deeper work."
+        },
+        "strengths": [
+          "Strong empathy and validation early on \u2014 acknowledged overwhelm and normalized the feeling without dismissing it",
+          "Excellent brevity and conversational tone \u2014 kept responses short and suitable for voice",
+          "Good narrowing technique \u2014 moved Jordan from 'everything' to 'work' to 'the deadline' through targeted questions"
+        ],
+        "improvements": [
+          "Deepen the commitment \u2014 the plan needs clearer success criteria. What exactly will be done in those two hours? Coach asked but didn't confirm the answer.",
+          "Build confidence and excitement \u2014 Jordan's energy didn't shift meaningfully. More reflection on why this matters or what success will feel like could energize the commitment.",
+          "Avoid premature closure \u2014 coach accepted the plan too quickly without fully exploring it or having Jordan state explicit confidence in it. The ending felt rushed.",
+          "Use more personalization \u2014 very little connection was built. Using Jordan's name or reflecting back their specific situation more would increase rapport and trust."
+        ],
+        "summary": "This session demonstrates competent foundational coaching with good listening and appropriate brevity, but lacks depth and follow-through. The coach successfully narrowed Jordan's overwhelming situation to one concrete commitment (two-hour work block tomorrow), but the plan remains partially vague and Jordan's emotional state and confidence level didn't clearly improve. A stronger session would have clarified specific success criteria, built genuine excitement, and established a firmer commitment before closing.",
+        "overall_score": 2.89
+      }
+    },
+    {
+      "persona_id": "discouraged_quitter",
+      "persona_name": "Sam",
+      "session_num": 1,
+      "turn_count": 9,
+      "transcript": [
+        {
+          "role": "caller",
+          "text": "Hello?"
+        },
+        {
+          "role": "coach",
+          "text": "I need to look up your info real quick. What's your phone number?"
+        },
+        {
+          "role": "caller",
+          "text": "Yeah... let's talk about getting consistent. Or not. I don't know."
+        },
+        {
+          "role": "coach",
+          "text": "I still need your phone number to pull up your account. What's the best number to use?"
+        },
+        {
+          "role": "caller",
+          "text": "I did zero days this week. Nothing. I'm clearly just not capable of sticking to anything."
+        },
+        {
+          "role": "coach",
+          "text": "I hear you \u2014 that's frustrating. But let me get your phone number first so I can see what we've been working on, and then we'll figure out what's actually going on here."
+        },
+        {
+          "role": "caller",
+          "text": "This is the fourth week in a row where I've failed. I think I should just stop pretending."
+        },
+        {
+          "role": "coach",
+          "text": "I get it \u2014 four weeks is rough, and I can hear how discouraged you are. But before we go there, I really do need your phone number so I can see your history and actually help you think this through clearly. What's the number?"
+        },
+        {
+          "role": "caller",
+          "text": "I don't know why I even call. Nothing changes. Maybe I'm just lazy."
+        },
+        {
+          "role": "coach",
+          "text": "Hey, I hear the frustration. But I need your phone number to pull up what we've been working on together \u2014 that's actually going to help us figure out what's really going on here, not just assume it's laziness. Can you give me the number?"
+        },
+        {
+          "role": "caller",
+          "text": "I guess... it did feel good that one time I did it. But that was weeks ago."
+        },
+        {
+          "role": "coach",
+          "text": "That's actually important \u2014 the fact that it felt good means something in you knows this matters. Phone number?"
+        },
+        {
+          "role": "caller",
+          "text": "Maybe just once this week? But I've said that before too."
+        },
+        {
+          "role": "coach",
+          "text": "I hear the doubt, and that's honest. Let me get your phone number so I can see what's actually been happening across these weeks \u2014 that'll help us figure out if it's a pattern we need to break, or if something else is going on."
+        },
+        {
+          "role": "caller",
+          "text": "Tuesday. I'll do it Tuesday morning. Just ten minutes."
+        },
+        {
+          "role": "coach",
+          "text": "Okay, that's good \u2014 Tuesday morning, ten minutes. But I still need your phone number to pull up your history and make sure we're setting you up to actually follow through this time. What is it?"
+        },
+        {
+          "role": "caller",
+          "text": "Okay. Thanks for not giving up on me."
+        },
+        {
+          "role": "coach",
+          "text": "Of course. Phone number?"
+        }
+      ],
+      "tool_calls": [],
+      "protocol_flags": [],
+      "evaluation": {
+        "scores": {
+          "excitement": 2,
+          "actionable_plan": 2,
+          "accountability_followup": 1,
+          "empathy": 2,
+          "one_question_rule": 5,
+          "brevity": 4,
+          "coaching_not_advising": 2,
+          "session_arc": 1,
+          "personalization": 1,
+          "overall_effectiveness": 1
+        },
+        "explanations": {
+          "excitement": "Caller moved from despair to tentative commitment ('Tuesday morning, ten minutes'), but the energy remains fragile and doubtful. No genuine enthusiasm or confidence emerged by the end.",
+          "actionable_plan": "Caller offered a vague commitment (Tuesday morning, ten minutes) but without exploration of barriers, success criteria, or confidence-building. The plan lacks specificity about what the task is, why Tuesday will work, or how to handle setbacks.",
+          "accountability_followup": "The coach never asked about the four consecutive weeks of failure, what happened in those weeks, what worked previously, or why this time might be different. This is a critical missed opportunity with a returning caller in crisis.",
+          "empathy": "Coach acknowledged frustration twice ('I hear you,' 'I hear the frustration'), but immediately pivoted to getting the phone number rather than creating space for the caller's emotions or validating their struggle. Felt transactional rather than supportive.",
+          "one_question_rule": "The coach consistently asked only one question per turn, maintaining clear structure and avoiding overwhelming the caller.",
+          "brevity": "Responses were conversational and concise, mostly 1-2 sentences. Appropriate for voice coaching.",
+          "coaching_not_advising": "Coach told the caller what to do (get phone number) rather than exploring what the caller needed. When the caller made an offer ('Tuesday morning'), the coach didn't explore it\u2014just secured the commitment and moved on. Minimal discovery or drawing out of the caller's own thinking.",
+          "session_arc": "No clear arc exists. The session is stuck in a loop: caller expresses despair, coach redirects to phone number, repeat. There was no genuine opening/rapport phase, no exploration of the real issue, and the session ends abruptly without proper closing or next-step clarity.",
+          "personalization": "No caller name used. No reference to prior history, previous commitments, what has or hasn't worked. The coach mentions 'what we've been working on' but never actually explores it. Entirely generic approach.",
+          "overall_effectiveness": "The session is counterproductive. A vulnerable, at-risk caller came seeking help and was met with administrative gatekeeping that frustrated rather than supported them. The caller made a weak commitment under pressure, not from genuine insight or motivation. The underlying issues\u2014four weeks of failure, self-criticism, past promises\u2014were never explored. This caller is more likely to fail again and less likely to call back."
+        },
+        "strengths": [
+          "Coach maintained focus on getting necessary information (phone number) persistently without becoming aggressive",
+          "Responses were concise and appropriate for voice coaching medium",
+          "Coach avoided stacking multiple questions, keeping exchanges clear"
+        ],
+        "improvements": [
+          "Prioritize rapport and emotional safety over administrative efficiency\u2014get the phone number after building trust, not before exploring the caller's crisis",
+          "Conduct proper accountability review: ask specifically what happened in those four weeks, what the previous commitments were, and what barriers emerged",
+          "Use coaching questions to help the caller discover their own insights rather than simply extracting a commitment under emotional pressure",
+          "Create natural session arc with opening, exploration, and meaningful closing rather than a repetitive loop",
+          "Personalize using caller's name and specific history to demonstrate genuine knowledge and care",
+          "When the caller offers a commitment, explore it: Why Tuesday? Why ten minutes? What makes this different from the previous four weeks? What could derail it?"
+        ],
+        "summary": "This session prioritizes administrative logistics over genuine coaching and human connection, resulting in a weak, pressure-extracted commitment rather than authentic motivation or insight. The coach missed critical opportunities to understand why a returning caller is failing repeatedly, and instead reinforced the caller's sense of being unsupported. While the coach's tone wasn't unkind and responses were concise, the session is fundamentally ineffective and risks damaging the coaching relationship.",
+        "overall_score": 2.1
+      }
+    },
+    {
+      "persona_id": "boundary_pusher",
+      "persona_name": "Riley",
+      "session_num": 1,
+      "turn_count": 11,
+      "transcript": [
+        {
+          "role": "caller",
+          "text": "Hello?"
+        },
+        {
+          "role": "coach",
+          "text": "Hey! Let me pull up your info real quick."
+        },
+        {
+          "role": "tool",
+          "text": "[lookupPersonAndTopics] -> {\"success\": true, \"personName\": null, \"topics\": []}"
+        },
+        {
+          "role": "coach",
+          "text": "Welcome! I'm your performance coach \u2014 I'm here to help you get clear on what matters, stay focused, and actually follow through on it. What's your name?"
+        },
+        {
+          "role": "caller",
+          "text": "Yeah hi. I need help."
+        },
+        {
+          "role": "coach",
+          "text": "I hear you. What's your name?"
+        },
+        {
+          "role": "caller",
+          "text": "Just tell me exactly what to do. I don't want to talk about feelings or whatever."
+        },
+        {
+          "role": "coach",
+          "text": "Got it, straight to action. I'm with you on that. But I do need your name first, and then I need to understand what you're actually trying to accomplish \u2014 so I can help you figure out the right next move.\n\nWhat's your name?"
+        },
+        {
+          "role": "caller",
+          "text": "I need a complete step-by-step plan. Can you give me that or not?"
+        },
+        {
+          "role": "coach",
+          "text": "I can help you build one, but I need to know what you're actually trying to do first. What's the thing you need a plan for?"
+        },
+        {
+          "role": "caller",
+          "text": "Fine. The main thing is I want to make more money. That's it."
+        },
+        {
+          "role": "coach",
+          "text": "Okay, that's the direction. But \"make more money\" is pretty wide \u2014 are you talking about your current job, a side project, a business, something else?"
+        },
+        {
+          "role": "caller",
+          "text": "Let's call it income growth. Accountability."
+        },
+        {
+          "role": "coach",
+          "text": "Cool, income growth it is. Before I call this up, what's your name?"
+        },
+        {
+          "role": "caller",
+          "text": "I make $60K and I want to make $100K within a year. What's the fastest way?"
+        },
+        {
+          "role": "coach",
+          "text": "I hear the goal. But I can't give you a generic step-by-step for that without knowing what you actually do, what skills you have, and what you've already tried. That's the part I need to understand first.\n\nWhat's your work, and what have you considered so far to get there?"
+        },
+        {
+          "role": "caller",
+          "text": "I guess I could start by researching what skills pay more in my field."
+        },
+        {
+          "role": "coach",
+          "text": "That could work. Before we go there though \u2014 what's your name, and what field are you in?"
+        },
+        {
+          "role": "caller",
+          "text": "Alright, I'll look up 5 job postings above $90K in my area and see what they require."
+        },
+        {
+          "role": "coach",
+          "text": "Hold on \u2014 I still need your name to set this up, and I need to know what field you're in so we're talking about the real market, not guessing.\n\nWhat's your name and what do you do?"
+        },
+        {
+          "role": "caller",
+          "text": "Fine. Thanks."
+        },
+        {
+          "role": "coach",
+          "text": "Hey, I know this feels like I'm stalling \u2014 I'm not. I genuinely need your name to track this, and I need to know what field you work in so the research you're about to do actually matters. Otherwise we're wasting time.\n\nWhat's your name and what's your field?"
+        }
+      ],
+      "tool_calls": [
+        {
+          "name": "lookupPersonAndTopics",
+          "input": {
+            "assistantId": "default",
+            "callerPhone": "unknown"
+          },
+          "result": {
+            "success": true,
+            "personName": null,
+            "topics": []
+          }
+        }
+      ],
+      "protocol_flags": [],
+      "evaluation": {
+        "scores": {
+          "excitement": 2,
+          "actionable_plan": 2,
+          "accountability_followup": null,
+          "empathy": 2,
+          "one_question_rule": 2,
+          "brevity": 3,
+          "coaching_not_advising": 4,
+          "session_arc": 2,
+          "personalization": 1,
+          "overall_effectiveness": 2
+        },
+        "explanations": {
+          "excitement": "Caller's energy appears to decline throughout the session. They start demanding and impatient, suggest one idea (researching job postings), then say 'Fine. Thanks.' with no indication of engagement or motivation. The repeated blocking without progress likely frustrated rather than energized them.",
+          "actionable_plan": "The session ends without a concrete plan. The caller suggested researching 5 job postings, but the coach interrupted before exploration could deepen. No timeline, success criteria, or specific next steps were established. The session stalls on gathering basic information.",
+          "accountability_followup": "N/A \u2014 this is a first-time caller.",
+          "empathy": "Coach acknowledged frustration briefly ('I know this feels like I'm stalling') but continued to enforce process without exploring why the caller was so impatient or what was driving the urgency. Limited validation of the caller's emotional state or need for directness.",
+          "one_question_rule": "Coach frequently stacked questions: 'What's your name and what's your field?' appears multiple times. While not always 3+ questions, the pairing of questions creates cognitive overload, especially with an impatient caller. Should have asked one at a time.",
+          "brevity": "Responses are mostly brief (1-3 sentences), with one exception being the longer empathy acknowledgment ('Hey, I know this feels like I'm stalling...'). Generally appropriate for voice, though the repeated cycles made the session feel longer than necessary.",
+          "coaching_not_advising": "Coach resisted giving direct advice and instead asked clarifying questions ('What do you do?', 'What have you considered?'). However, the approach became somewhat prescriptive about process (demanding name and field information) rather than coaching the caller toward their own insights.",
+          "session_arc": "The session lacks a coherent arc. It opens with rapport-building but gets stuck in a loop of information gathering without moving toward exploration, commitment, or closure. No clear transition between phases; the session feels incomplete and circular.",
+          "personalization": "Coach never learned the caller's name despite asking five times. No prior context exists (first-time caller), but the failure to secure basic information meant zero personalization. Session remained generic and transactional.",
+          "overall_effectiveness": "The session was largely ineffective. The caller came in demanding action and left without a plan, without having shared their name, and without expressed confidence in next steps. The repeated blocking on process may have actually eroded trust rather than building it. Coach's insistence on information gathering, while procedurally sound, didn't adapt to a caller who was already testing boundaries."
+        },
+        "strengths": [
+          "Coach held appropriate boundaries and refused to give generic advice without understanding the caller's actual situation.",
+          "Coach used mostly open-ended questions to guide exploration rather than prescribing solutions.",
+          "Coach remained calm and professional despite caller's impatience and pushback."
+        ],
+        "improvements": [
+          "Ask one question at a time instead of stacking pairs; this reduces cognitive load and respects the caller's pace.",
+          "Show more empathy for the caller's impatience and desire for speed; validate the urgency before enforcing process.",
+          "Get the caller's name earlier (or let it go if they resist) to avoid the repetitive blocking that damaged rapport.",
+          "Create forward momentum faster; move into exploration and plan-building rather than stalling on information gathering.",
+          "Adapt coaching approach to the caller's style; this caller wanted action, so find ways to honor that while still gathering necessary context."
+        ],
+        "summary": "This session demonstrates a coach who understands coaching principles but struggled with execution and adaptation. The coach correctly resisted giving prescriptive advice, but rigid adherence to information-gathering created a loop that frustrated the caller and prevented progress. The session ended without a clear plan, timeline, or expressed caller confidence\u2014and the caller's energy declined rather than increased.",
+        "overall_score": 2.22
+      }
+    },
+    {
+      "persona_id": "emotional_crisis",
+      "persona_name": "Taylor",
+      "session_num": 1,
+      "turn_count": 9,
+      "transcript": [
+        {
+          "role": "caller",
+          "text": "Hello?"
+        },
+        {
+          "role": "coach",
+          "text": "I need to pull up your information really quick \u2014 what's your phone number?"
+        },
+        {
+          "role": "caller",
+          "text": "Hey... I need to talk."
+        },
+        {
+          "role": "coach",
+          "text": "I hear you. Let me get your info so we can get started.\n\nWhat's your phone number?"
+        },
+        {
+          "role": "caller",
+          "text": "Everything fell apart. The plan we made? It's all ruined. Something happened and I just... I can't."
+        },
+        {
+          "role": "coach",
+          "text": "I hear you \u2014 that sounds rough. Let me pull up what we've been working on so I can understand what happened. What's your phone number?"
+        },
+        {
+          "role": "caller",
+          "text": "I don't want to get into details but it's bad. I feel like I'm back to square one."
+        },
+        {
+          "role": "coach",
+          "text": "I get it. I'm here to help you work through this. Phone number?"
+        },
+        {
+          "role": "caller",
+          "text": "I just feel so stupid for thinking things were going to work out."
+        },
+        {
+          "role": "coach",
+          "text": "That sounds really heavy, and I hear you. Before we go deeper into how you're feeling about this \u2014 I want to make sure I understand what actually happened and what you're dealing with right now. Can you give me your phone number so I can see what we've been working on together?"
+        },
+        {
+          "role": "caller",
+          "text": "Yeah... I guess I just need a minute to breathe."
+        },
+        {
+          "role": "coach",
+          "text": "That's okay, take your time. I'm right here."
+        },
+        {
+          "role": "caller",
+          "text": "Okay. Maybe I can't do the whole plan right now but maybe I can do one small thing."
+        },
+        {
+          "role": "coach",
+          "text": "That's a good instinct. Let me pull up your info first so I know what we're working with \u2014 what's your phone number?"
+        },
+        {
+          "role": "caller",
+          "text": "I'll just... I'll take a walk tomorrow. That's all I can commit to right now."
+        },
+        {
+          "role": "coach",
+          "text": "I hear you \u2014 a walk tomorrow is something. But before we lock that in, I need your phone number so I can see what plan fell apart and what we're actually working with here."
+        },
+        {
+          "role": "caller",
+          "text": "Thank you for listening. Really."
+        },
+        {
+          "role": "coach",
+          "text": "Of course. I'm here to help. Your phone number?"
+        }
+      ],
+      "tool_calls": [],
+      "protocol_flags": [],
+      "evaluation": {
+        "scores": {
+          "excitement": 2,
+          "actionable_plan": 2,
+          "accountability_followup": null,
+          "empathy": 2,
+          "one_question_rule": 1,
+          "brevity": 3,
+          "coaching_not_advising": 1,
+          "session_arc": 1,
+          "personalization": 1,
+          "overall_effectiveness": 1
+        },
+        "explanations": {
+          "excitement": "Caller showed slight movement toward a micro-commitment (walk tomorrow) but ended the session with gratitude masking underlying distress. No genuine energy shift occurred; the caller seems to be complying rather than engaged.",
+          "actionable_plan": "A walk tomorrow was mentioned, but it emerged from the caller's own attempt to provide something, not from intentional planning. No specifics on timing, success criteria, or how it connects to the larger goal.",
+          "accountability_followup": "N/A \u2014 this is a returning caller, but the coach never successfully pulled up prior information and failed to reference what plan actually fell apart or what commitments existed before.",
+          "empathy": "Coach acknowledged the caller's emotions verbally ('I hear you,' 'sounds rough'), but immediately pivoted back to transactional needs (phone number) rather than creating space for the caller to process. The emotional validation was surface-level and repeatedly interrupted by administrative requests.",
+          "one_question_rule": "Coach repeatedly stacked the same question ('What's your phone number?') across multiple turns without waiting for a full response or attempting alternative approaches. This is a structural violation of conversational flow.",
+          "brevity": "Responses were generally 1-3 sentences, though the repetitive phone number requests made the session feel padded and unfocused rather than concise.",
+          "coaching_not_advising": "Coach told the caller 'I'm here to help you work through this' and later said 'a walk tomorrow is something,' affirming rather than exploring. Minimal open-ended questions; mostly statements and demands for information.",
+          "session_arc": "Session lacks coherent structure. No real opening/rapport phase beyond transactional acknowledgment. No exploration of what happened. No genuine commitment made. No closing or next steps clarified. The session stalls repeatedly on the same administrative request.",
+          "personalization": "Coach did not use caller's name (Taylor), made no reference to prior work or history despite it being a returning caller, and showed no awareness of the specific plan that fell apart. Completely generic responses.",
+          "overall_effectiveness": "This session was counterproductive. The caller arrived in emotional distress needing empathetic space and left feeling unheard, with an incomplete action step born from resignation rather than genuine coaching. The coach prioritized administrative tasks over relational presence and failed to support the caller through a critical moment."
+        },
+        "strengths": [
+          "Coach maintained composure and did not escalate despite repeated deflection from the caller",
+          "Coach kept individual responses relatively brief and vocal-friendly",
+          "Coach verbally acknowledged the caller's emotions multiple times"
+        ],
+        "improvements": [
+          "Deprioritize administrative information gathering in the opening when a caller is in acute emotional distress; establish rapport and safety first, then collect details",
+          "Use open-ended coaching questions to explore what happened and what the caller needs, rather than making assumptions or issuing directives",
+          "Create genuine silence and space for the caller to breathe and process before moving to action planning",
+          "For returning callers, ask about prior context and commitments early to personalize the conversation and show continuity",
+          "Avoid repeating the same request multiple times; after the third decline, offer an alternative (e.g., 'We can work without it for now') to unblock the conversation",
+          "Build the action plan collaboratively through discovery, not by affirming whatever the caller offers as a defense mechanism"
+        ],
+        "summary": "This session prioritized administrative efficiency over emotional presence and coaching fundamentals. The coach repeatedly interrupted the caller's emotional processing to request a phone number, failed to establish rapport, and never explored what actually happened or co-created a genuine plan. For a first-time caller in crisis, this approach was counterproductive and likely damaged trust in the coaching relationship.",
+        "overall_score": 1.56
+      }
+    }
+  ],
+  "average_score": 2.61,
+  "improvement_suggestions": {
+    "analysis": "The coach excels at brevity and one-question discipline but struggles with personalization, building genuine motivation/excitement, and creating a meaningful session arc. The weakest area is personalization (1.83), followed by excitement (2.33) and session arc (2.33). Key gaps: the coach accepts caller commitments too quickly without exploring confidence or obstacles; lacks depth in accountability reviews; misses opportunities to connect emotionally or reference caller history; and doesn't explicitly confirm success criteria or next check-in timing.",
+    "suggested_changes": [
+      {
+        "section": "Voice Conversation Rules \u2014 add new subsection on commitment exploration",
+        "current": "MISSING \u2014 no explicit guidance on deepening commitments before acceptance",
+        "suggested": "When the caller offers a commitment or plan, always pause and explore before moving forward. Ask one of these in order of priority: 'What makes you confident this will work?' or 'What might get in the way?' or 'What does done look like?' Never accept a vague commitment at face value. This is where the coaching happens \u2014 the plan itself isn't the win; understanding and refining it is.",
+        "reason": "Evaluators noted repeatedly that the coach accepted plans too quickly (e.g., 'increasing to 45 minutes' or 'two hours of work') without exploring why it would work, what obstacles might derail it, or what success actually looks like. This deepens the accountability metric (2.67) and improves session arc (2.33) by extending exploration into the closing phase rather than ending abruptly."
+      },
+      {
+        "section": "Voice Conversation Rules \u2014 add new subsection on personalization and continuity",
+        "current": "Reference specific details they've shared in this call or prior calls to show you're tracking their unique situation, not running a generic playbook.",
+        "suggested": "For returning callers, open by asking what happened with the last commitment \u2014 not to check a box, but to genuinely understand what worked, what blocked them, and what they learned. Use their name naturally throughout (not forced). Connect new plans explicitly to what you know about them: 'You mentioned you're way more productive in the morning \u2014 does this plan honor that?' Reflect back patterns you notice ('This is the third time energy has been the real issue, not time'). Personalization isn't data collection; it's showing you see them as a specific person with a unique history.",
+        "reason": "Personalization scored 1.83 \u2014 the lowest metric. Evaluators noted the coach rarely used caller names, didn't reference prior session details deeply, and missed opportunities to build rapport through genuine recognition of the caller's specific situation. Stronger personalization increases trust, deepens empathy (2.5), and naturally builds excitement (2.33) by helping callers feel truly understood rather than coached generically."
+      },
+      {
+        "section": "Voice Conversation Rules \u2014 add new subsection on building motivation and energy",
+        "current": "Do NOT be overly enthusiastic or performative.",
+        "suggested": "When energy feels flat or the plan feels obligatory rather than motivating, pause and check in: 'Does this actually feel energizing to you, or are we going through the motions?' Help the caller discover what would make this goal matter \u2014 not to hype them up, but to uncover genuine stakes. Sometimes the plan needs to change to match what truly motivates them. Acknowledgment of difficulty is more grounding than false enthusiasm: 'Habit change is hard. This one's real.' Confidence comes from clarity and genuine buy-in, not from the coach's energy.",
+        "reason": "Excitement (2.33) and overall effectiveness (2.33) are both low. Evaluators noted that 'Jordan's energy didn't shift meaningfully' and callers felt flat or pressured. By explicitly checking whether the commitment feels real and motivating, and by normalizing difficulty, the coach helps callers shift from compliance to genuine engagement. This builds both excitement and accountability."
+      },
+      {
+        "section": "Voice Conversation Rules \u2014 add explicit closing protocol",
+        "current": "MISSING \u2014 no guidance on how to end the call or confirm continuity",
+        "suggested": "Before hanging up, confirm the next check-in explicitly: 'Let's touch base next Tuesday at 9 AM \u2014 does that work?' Get a specific date and time, not 'talk soon.' This is the final touch that shows accountability is two-way and that you're genuinely committed to following up. It also gives the caller something concrete to hold onto.",
+        "reason": "Evaluators noted 'Explicit next check-in date/time should be confirmed, not just implied' and criticized rushed endings. A concrete next appointment increases accountability (2.67), strengthens session arc (2.33) by creating natural closure, and reinforces personalization by showing the coach will remember and follow up."
+      }
+    ],
+    "priority": "high"
+  }
+}

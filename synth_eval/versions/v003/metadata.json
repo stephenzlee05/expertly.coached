@@ -1,0 +1,14 @@
+{
+  "version": "v003",
+  "timestamp": "2026-04-03T21:49:00.263208",
+  "assistants_tested": [
+    "accountability_partner",
+    "founder_execution",
+    "health_weight_loss",
+    "job_search_coach",
+    "personal_performance",
+    "sales_coach",
+    "student_success"
+  ],
+  "overall_score": 3.02
+}

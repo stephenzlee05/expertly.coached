@@ -11,6 +11,7 @@ Usage:
     python run_synth_eval.py --list-versions        # show past runs
     python run_synth_eval.py --compare v001 v002    # compare two versions
     python run_synth_eval.py --verbose               # show full transcripts
+    python run_synth_eval.py --no-apply-prompts      # eval only; do not write prompt_*.txt
 """
 
 import argparse
@@ -28,7 +29,10 @@ from synth_eval.discovery import discover_assistants
 from synth_eval.personas import get_personas_for_coach
 from synth_eval.simulator import run_full_persona
 from synth_eval.evaluator import evaluate_session
-from synth_eval.improver import suggest_improvements
+from synth_eval.improver import (
+    apply_improvements_to_assistants,
+    suggest_improvements,
+)
 from synth_eval.versioning import (
     get_next_version,
     create_version_snapshot,
@@ -188,8 +192,14 @@ def run_improvement_cycle(
     coaches: dict,
     num_cycles: int = 1,
     verbose: bool = False,
+    apply_prompts: bool = True,
 ):
-    """Run multiple evaluation-improvement cycles."""
+    """Run multiple evaluation-improvement cycles.
+
+    After each cycle, snapshots are saved with the prompts that were *evaluated*.
+    If ``apply_prompts`` is True, suggested improvements are applied to ``prompt_*.txt``
+    so the next cycle (or your working tree) uses the updated prompts.
+    """
 
     for cycle in range(1, num_cycles + 1):
         print(f"\n{'#'*60}")
@@ -219,9 +229,19 @@ def run_improvement_cycle(
         print(summary)
         print(f"\n  Saved to: {version_dir}")
 
-        if cycle < num_cycles:
-            print(f"\n  (Next cycle will use the same prompts — apply improvements manually")
-            print(f"   or use --apply-improvements to auto-apply between cycles)")
+        if apply_prompts:
+            print(f"\n  --- Applying prompt updates ---")
+            logs = apply_improvements_to_assistants(coaches, report)
+            if not logs:
+                print("  (No assistant results to apply.)")
+            for slug, lines in logs.items():
+                print(f"  {slug}:")
+                for line in lines:
+                    print(f"    {line}")
+        elif cycle < num_cycles:
+            print(
+                "\n  Note: --no-apply-prompts set; next cycle will use the same prompt files."
+            )
 
 
 def main():
@@ -244,6 +264,11 @@ def main():
         "--verbose",
         action="store_true",
         help="Show full transcripts during evaluation",
+    )
+    parser.add_argument(
+        "--no-apply-prompts",
+        action="store_true",
+        help="Do not write suggested changes to prompt_*.txt after each cycle",
     )
     parser.add_argument(
         "--list-versions",
@@ -326,6 +351,7 @@ def main():
         coaches=coaches,
         num_cycles=args.cycles,
         verbose=args.verbose,
+        apply_prompts=not args.no_apply_prompts,
     )
 
 

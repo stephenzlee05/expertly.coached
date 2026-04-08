@@ -162,7 +162,7 @@ Copy `.env.example` to `.env` and fill in the values:
 | `MONGODB_URI` | MongoDB connection string (e.g. MongoDB Atlas URI) |
 | `MONGODB_DB_NAME` | Database name (default: `expertly`) |
 | `ANTHROPIC_API_KEY` | Claude API key for summary generation |
-| `CLAUDE_MODEL` | Claude model ID (e.g. `claude-sonnet-4-20250514`) |
+| `CLAUDE_MODEL` | Claude model ID (e.g. `claude-haiku-4-5-20251001`) |
 | `VAPI_SERVER_SECRET` | Shared secret for VAPI webhook/tool auth |
 | `ADMIN_API_KEY` | API key for admin endpoints |
 | `SUMMARY_CAP` | Max summaries per topic before consolidation (default: `5`) |
