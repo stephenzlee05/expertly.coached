@@ -30,7 +30,8 @@
       "Bash(python run_synth_eval.py --coach accountability_partner)",
       "Bash(python -u run_synth_eval.py --coach accountability_partner)",
       "Bash(python run_synth_eval.py --list-versions)",
-      "Bash(python run_synth_eval.py --show-version v001)"
+      "Bash(python run_synth_eval.py --show-version v001)",
+      "Bash(python3)"
     ]
   }
 }
