@@ -68,6 +68,22 @@ EVAL_QUESTIONS = [
 ]
 
 
+# Weights for overall score calculation.
+# Outcome-oriented dimensions count more; protocol dimensions count less.
+SCORE_WEIGHTS = {
+    "overall_effectiveness": 1.5,
+    "actionable_plan": 1.5,
+    "coaching_not_advising": 1.5,
+    "personalization": 1.5,
+    "accountability_followup": 1.2,
+    "empathy": 1.2,
+    "excitement": 1.0,
+    "session_arc": 1.0,
+    "one_question_rule": 0.75,
+    "brevity": 0.75,
+}
+
+
 def _format_transcript(transcript: list[dict]) -> str:
     """Convert transcript list to readable text for the evaluator."""
     lines = []
@@ -201,9 +217,15 @@ Be rigorous and honest. A score of 3 is average. Only give 5 for truly excellent
             "raw_response": raw_text,
         }
 
-    # Calculate overall score (average of non-null scores)
+    # Calculate overall score (weighted average — outcome dimensions weighted higher)
     scores = result.get("scores", {})
-    valid_scores = [v for v in scores.values() if v is not None and isinstance(v, (int, float))]
-    result["overall_score"] = round(sum(valid_scores) / len(valid_scores), 2) if valid_scores else 0
+    total_weight = 0.0
+    weighted_sum = 0.0
+    for key, val in scores.items():
+        if val is not None and isinstance(val, (int, float)):
+            weight = SCORE_WEIGHTS.get(key, 1.0)
+            weighted_sum += val * weight
+            total_weight += weight
+    result["overall_score"] = round(weighted_sum / total_weight, 2) if total_weight > 0 else 0
 
     return result

@@ -297,6 +297,167 @@ PERSONAS = [
             },
         ],
     },
+    # ---------------------------------------------------------------
+    # COACH-SPECIFIC PERSONAS
+    # ---------------------------------------------------------------
+    {
+        "id": "overachiever_burnout",
+        "name": "Casey",
+        "background": "High achiever who keeps adding more to their plate; the real problem is doing too much, not too little",
+        "emotional_state": "exhausted but driven, keeps framing this as a productivity problem",
+        "compatible_coaches": ["personal_performance"],
+        "sessions": [
+            {
+                "session_num": 1,
+                "scenario_type": "returning",
+                "mock": {
+                    "lookupPersonAndTopics": {
+                        "success": True,
+                        "personName": "Casey",
+                        "topics": [
+                            {
+                                "topicId": "topic_burnout_001",
+                                "topicName": "Performance optimization",
+                                "lastSummarySnippet": "Added morning journaling and extra project work. Feeling behind on everything.",
+                                "updatedAt": "2026-04-01T10:00:00Z",
+                            }
+                        ],
+                    },
+                    "startTopicSession": {
+                        "success": True,
+                        "topicId": "topic_burnout_001",
+                        "topicName": "Performance optimization",
+                        "conversationId": "conv_synth_burnout_001",
+                        "mode": "accountability",
+                        "coachingTemplateCode": None,
+                        "summarySoFar": (
+                            "--- Session 1 ---\n"
+                            "Casey wants to be more productive. Added morning journaling routine.\n"
+                            "Also took on a new side project at work.\n"
+                            "Committed to waking up 30 min earlier to fit everything in.\n"
+                            "Open item: maintain all current commitments plus new additions."
+                        ),
+                    },
+                },
+                "user_messages": [
+                    "Hey, yeah let's talk about performance.",
+                    "Honestly I feel like I'm falling apart. I'm doing everything I said I would but I'm exhausted.",
+                    "I don't know, maybe I need to add a better evening routine too. Get more structured.",
+                    "I've been sleeping like 5 hours a night trying to fit it all in.",
+                    "I guess... maybe I'm taking on too much? But I feel like if I drop anything I'll fall behind.",
+                    "What if I just... stopped the side project for now?",
+                    "Okay. I'll pause the side project this week and see if that helps.",
+                    "Thanks, yeah. I need permission to do less apparently.",
+                ],
+            }
+        ],
+    },
+    {
+        "id": "interview_prepper",
+        "name": "Morgan",
+        "background": "Has 2 interviews next week — a phone screen and a hiring manager call — needs prep coaching, not application coaching",
+        "emotional_state": "nervous but hopeful",
+        "compatible_coaches": ["job_search_coach"],
+        "sessions": [
+            {
+                "session_num": 1,
+                "scenario_type": "returning",
+                "mock": {
+                    "lookupPersonAndTopics": {
+                        "success": True,
+                        "personName": "Morgan",
+                        "topics": [
+                            {
+                                "topicId": "topic_interview_001",
+                                "topicName": "Job search",
+                                "lastSummarySnippet": "Submitted 12 applications. Got 2 interview requests. Feeling good about momentum.",
+                                "updatedAt": "2026-04-05T10:00:00Z",
+                            }
+                        ],
+                    },
+                    "startTopicSession": {
+                        "success": True,
+                        "topicId": "topic_interview_001",
+                        "topicName": "Job search",
+                        "conversationId": "conv_synth_interview_001",
+                        "mode": "accountability",
+                        "coachingTemplateCode": None,
+                        "summarySoFar": (
+                            "--- Session 1 ---\n"
+                            "Morgan is searching for a senior product manager role in fintech.\n"
+                            "Submitted 12 applications last week. Got 2 callbacks.\n"
+                            "Phone screen with Stripe on Tuesday, hiring manager call at Plaid on Thursday.\n"
+                            "Committed to researching both companies before the calls."
+                        ),
+                    },
+                },
+                "user_messages": [
+                    "Hey, I have two interviews this week and I'm kind of freaking out.",
+                    "Stripe phone screen Tuesday and Plaid hiring manager call Thursday.",
+                    "I looked up both companies but I don't know what they're going to ask.",
+                    "I always freeze on the 'tell me about yourself' question.",
+                    "I guess I'd say I'm a PM with 5 years in payments and I'm good at shipping fast.",
+                    "Yeah, that's pretty generic. How do I make it land better?",
+                    "Okay, so tie it to why I want this specific role and what I'd bring.",
+                    "I'll practice my intro out loud tonight and write out the key points. Fifteen minutes.",
+                    "Okay, thanks. That feels more manageable.",
+                ],
+            }
+        ],
+    },
+    {
+        "id": "stalled_deal",
+        "name": "Drew",
+        "background": "Has a $50K deal in final stages that went quiet after the demo 2 weeks ago; needs deal-specific coaching",
+        "emotional_state": "frustrated, not sure whether to push or wait",
+        "compatible_coaches": ["sales_coach"],
+        "sessions": [
+            {
+                "session_num": 1,
+                "scenario_type": "returning",
+                "mock": {
+                    "lookupPersonAndTopics": {
+                        "success": True,
+                        "personName": "Drew",
+                        "topics": [
+                            {
+                                "topicId": "topic_deal_001",
+                                "topicName": "Q2 pipeline",
+                                "lastSummarySnippet": "Demo went well with Acme. Waiting on their internal approval. Committed to following up Friday.",
+                                "updatedAt": "2026-04-01T10:00:00Z",
+                            }
+                        ],
+                    },
+                    "startTopicSession": {
+                        "success": True,
+                        "topicId": "topic_deal_001",
+                        "topicName": "Q2 pipeline",
+                        "conversationId": "conv_synth_deal_001",
+                        "mode": "accountability",
+                        "coachingTemplateCode": None,
+                        "summarySoFar": (
+                            "--- Session 1 ---\n"
+                            "Drew has a $50K deal with Acme in final stages.\n"
+                            "Demo two weeks ago went well. Champion is their VP of Ops.\n"
+                            "Committed to following up with champion last Friday.\n"
+                            "Open item: re-engage Acme and assess deal health."
+                        ),
+                    },
+                },
+                "user_messages": [
+                    "Yeah let's talk about the Acme deal. It's driving me crazy.",
+                    "I followed up Friday like I said. Nothing. Sent another email Monday. Still nothing.",
+                    "The demo went great, they seemed excited. Now it's like they disappeared.",
+                    "I don't know, maybe their budget got frozen or something.",
+                    "I mean... I do have a direct line to the VP. I could just call her.",
+                    "I'm worried about coming across as pushy.",
+                    "I guess a call is more human than a third email. I could frame it as checking in on their timeline.",
+                    "Okay, I'll call her tomorrow at 2pm. I'll ask about their decision timeline and whether there's anything they need from me.",
+                    "Yeah that's the plan. Thanks.",
+                ],
+            }
+        ],
+    },
 ]
 
 
